@@ -1,0 +1,7 @@
+.venv
+
+LLMs/
+
+frame_and_papers/
+
+__pycache__/

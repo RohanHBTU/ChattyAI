@@ -1,0 +1,11 @@
+transformers
+accelerate
+sentencepiece
+llama-index
+llama-index-llms-huggingface
+llama-index-embeddings-huggingface
+bitsandbytes
+python-dotenv
+llama-index-readers-json
+beautifulsoup4
+lxml

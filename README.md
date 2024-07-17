@@ -1,0 +1,1 @@
+To get the insight into the work being done or already implemented, read my weekly blog at https://medium.com/@rohank587/spending-the-summer-24-in-gsoc-with-red-hen-lab-5c8aade49026 or mail me at rohank587@gmail.com for any queries.
