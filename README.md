@@ -9,6 +9,7 @@ To get the insight into the work being done or already implemented, read my week
 ## Table of Contents
 
 - [Installation](#installation)
+- [Fulltext Annotation Parser](#fulltext-annotation-parser)
 - [FrameNet XML Parser](#framenet-xml-parser)
 - [RAG for Llama3 Instruct](#rag-for-llama3-instruct)
 - [Downloading Llama3 Instruct (Meta AI)](#downloading-llama3-instruct)
@@ -38,6 +39,43 @@ touch .env
 # HUGGINGFACE_API_KEY="..."
 ```
 
+## Fulltext Annotation Parser
+
+## Introduction
+
+This code is capable of converting the original Fulltext annotated corpus of FrameNet data in XML format to JSON format. A single sentence is annotated into various layers such as part of speech, named entity recognition, white space layer (word sense disambiguation), FrameNet layer and others (Other, Sent, Verb). The most significant layers for our purpose are FrameNet and Named Entity Recognition. It is similar to FrameNet XML Parser.
+
+## Usage
+
+```bash
+#Activate the virtual environment
+source .venv/bin/activate
+
+#Pass XML annotated file path as argument
+python3 fulltext_anno_pipeline.py ANC__110CYL068.xml
+
+#leaving virtual environment
+deactivate
+```
+OR
+```python
+from fulltext_anno_pipeline import full_text_anno_parser
+
+# Example of parsing a directory of .xml files
+path = "ANC__110CYL068.xml" #or any other xml annotated file path
+
+#initializing output JSON
+res_dict=dict()
+count=1
+
+#sample addition for description
+res_dict['0']={"sample sentence":{"sample layer":[['start','end','label name','highlighted string','frame name(if frame layer)','lexical unit(if frame layer)']]}}
+
+for i in full_text_anno_parser(path):
+	res_dict[str(count)]=i
+        count+=1
+print(res_dict)
+```
 
 ## FrameNet XML Parser
 
