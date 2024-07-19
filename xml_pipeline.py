@@ -9,7 +9,8 @@ def get_fr_name(name):
     Bs_data = BeautifulSoup(data, "xml")
     frame_name=Bs_data.find('frame').get('name')
     if len(frame_name)!=0:
-        frame_name=frame_name.replace("-"," ").replace("_"," ").strip()
+        #frame_name=frame_name.replace("-"," ").replace("_"," ").strip()
+        frame_name=frame_name.strip()
         return frame_name
     else:
         return "no frame name"
@@ -129,23 +130,26 @@ def xml_parser(name):
     out['frame_name']=get_fr_name(name)
     
     #frame def
-    out['frame_def']=get_fr_def(name)
+    out['frame_definition']=get_fr_def(name)
+
+    #frame url
+    out['frame_url_for_more_info']=f"https://framenet.icsi.berkeley.edu/fnReports/data/frameIndex.xml?frame={out['frame_name']}"
     
     #frame element desc
     fe_dict=dict()
     for i in get_fe_def(name):
         fe_dict[i[0]]=i[1]
-    out['fe_def']=fe_dict
+    out['frame_elements_with_definition']=fe_dict
     
     #frame lexical unit & def
     le_dict=dict()
     for i in get_lex_udef(name):
         le_dict[i[0]]=i[1]
-    out['lexical']=le_dict
+    out['lexical_units']=le_dict
     
     #frame examples
     if get_fr_ex(name)=="no example found":
-        out['examples']="no example found"
+        out['example_sentences_with_annotation']="no example found"
     else:
         ex=""
         fe_dict_in=dict()
@@ -159,15 +163,15 @@ def xml_parser(name):
             elif type(i)==type(('a','b','v')):
                 fe_dict_in[i[0]]=i[1]
             else:
-                out['examples']="no example/error"
+                out['example_sentences_with_annotation']="no example/error"
                 break
-        out['examples']=fe_dict_out
+        out['example_sentences_with_annotation']=fe_dict_out
     
     #frame relation
     frel_dict=dict()
     for i in get_fr_rel(name):
         frel_dict[i[0]]=i[1]
-    out['fr_rel']=frel_dict
+    out['frame_relation_with_other_frames']=frel_dict
     
     return out
 
@@ -223,6 +227,7 @@ def qa_extractor3(name):
     return inputer.strip(),output.strip()
 
 if __name__=="__main__":
+    '''
     parser=argparse.ArgumentParser()
     parser.add_argument("path",help="enter XML file path")
 
@@ -233,7 +238,7 @@ if __name__=="__main__":
     import os
     from tqdm import tqdm
     xml_folder_name = "/mnt/rds/redhen/gallina/projects/ChattyAI/FramesConstructions/fndata-1.7/frame"
-    json_folder_name = "frame_json_parsed"
+    json_folder_name = "papers"
     if not os.path.exists(json_folder_name):
         os.makedirs(json_folder_name)
     file_names = [file for file in os.listdir(xml_folder_name) if file[-4:] == ".xml"]
@@ -273,3 +278,4 @@ if __name__=="__main__":
     with open(f'prompts_{name_xml}.txt','rb+') as file:
         file.seek(-4, 2) 
         file.truncate()
+        '''
