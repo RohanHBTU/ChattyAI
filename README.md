@@ -120,6 +120,9 @@ This code utilizes Llama3-8B-Instruct-chat locally on CWRU HPC, and achieves Ret
 #Activate the virtual environment
 source .venv/bin/activate
 
+#Embedding model cache
+mkdir embed_model
+
 #Initiating conversation with Llama3
 python3 rag_llama3.py
 
