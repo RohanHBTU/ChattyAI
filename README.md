@@ -19,7 +19,7 @@ To get the insight into the work being done or already implemented, read my week
 Follow the instructions to setup environment.
 
 Modules to load on CWRU HPC:
-- Python/3.11.3
+- Python/3.11.3-GCCcore-12.3.0
 
 ```bash
 # Cloning the repository
