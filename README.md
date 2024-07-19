@@ -27,7 +27,7 @@ git clone https://github.com/RohanHBTU/ChattyAI
 cd ChattyAI
 
 # [Optional] Creating virtual environment
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 
 # Download dependencies
