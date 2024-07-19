@@ -8,7 +8,8 @@ import torch
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core import PromptTemplate
 
-selected_model = "meta-llama/Meta-Llama-3-8B-Instruct"
+selected_model = "./LLMs/llama3/Llama-3-8B-Instruct-hf"
+#selected_model = "meta-llama/Meta-Llama-3-8B-Instruct"
 #selected_model = "meta-llama/Meta-Llama-3-8B"
 
 from llama_index.core import PromptTemplate
