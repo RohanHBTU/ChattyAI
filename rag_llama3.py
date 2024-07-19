@@ -25,6 +25,8 @@ query_wrapper_prompt = PromptTemplate(
 from transformers import AutoTokenizer
 from llama_index.llms.huggingface import HuggingFaceLLM
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+#tokenizer = AutoTokenizer.from_pretrained(selected_model)
+
 stopping_ids = [tokenizer.eos_token_id,tokenizer.convert_tokens_to_ids("<|eot_id|>")]
 
 llm = HuggingFaceLLM(
@@ -43,7 +45,8 @@ llm = HuggingFaceLLM(
 
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+cache_direc="./embed_model"
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5",cache_folder=cache_direc)
 
 from llama_index.core import Settings
 
