@@ -153,7 +153,7 @@ Request download access to Llama 3 [here](https://llama.meta.com/llama-downloads
 
 ```bash
 git clone https://github.com/meta-llama/llama3.git
-cd llama
+cd llama3
 ./download.sh # requires the pre-signed URL from Meta License
 ```
 3. Convert the model weights to run with Hugging Face
