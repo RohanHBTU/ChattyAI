@@ -5,3 +5,5 @@ LLMs/
 frame_and_papers/
 
 __pycache__/
+
+embed_model/
