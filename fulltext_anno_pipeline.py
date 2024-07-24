@@ -114,13 +114,34 @@ def qa_extractor2(pather):
     return question,answer
 
 if __name__=="__main__":
+    
     parser=argparse.ArgumentParser()
     parser.add_argument("path",help="enter full text annotation XML file path")
 
     args=parser.parse_args()
     path=str(args.path)
     name_xml=path.split("/")[-1][:-4]
-
+    '''
+    import os
+    from tqdm import tqdm
+    xml_folder_name = "/mnt/rds/redhen/gallina/projects/ChattyAI/FramesConstructions/fndata-1.7/fulltext"
+    json_folder_name = "fulltext_anno"
+    if not os.path.exists(json_folder_name):
+        os.makedirs(json_folder_name)
+    file_names = [file for file in os.listdir(xml_folder_name) if file[-4:] == ".xml"]
+    progress_bar = tqdm(total=len(file_names), desc="Parsing")
+    for file in file_names:
+        res_dict=dict()
+        count=1
+        for i in full_text_anno_parser(f'{xml_folder_name}/{file}'):
+            res_dict[str(count)]=i
+            count+=1
+        with open(f'{json_folder_name}/parsed_{file.replace(".xml",".json")}','w') as outfile:
+            json.dump(res_dict,outfile,indent=4)
+        progress_bar.update(1)
+    progress_bar.close()
+    print("Finished")
+    '''
     with open(f'parsed_anno_{name_xml}.json','w') as outfile:
         res_dict=dict()
         count=1
