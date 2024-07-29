@@ -1,6 +1,10 @@
 .venv
 
-LLMs/
+LLMs/llama-models/
+
+LLMs/llama3/
+
+LLMs/llama/
 
 frame_and_papers/
 
