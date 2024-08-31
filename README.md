@@ -9,6 +9,7 @@ To get the insight into the work being done or already implemented, read my week
 ## Table of Contents
 
 - [Installation](#installation)
+- [Frame Annotation Evaluation](#frame-annotation-evaluation)
 - [Fulltext Annotation Parser](#fulltext-annotation-parser)
 - [FrameNet XML Parser](#framenet-xml-parser)
 - [RAG for Llama3 Instruct](#rag-for-llama3-instruct)
@@ -38,6 +39,47 @@ touch .env
 # Enter your Huggingface API key in ".env" like this:
 # HUGGINGFACE_API_KEY="..."
 ```
+
+## Frame Annotation Evaluation
+
+This evaluation aims to assess the performance of LLaMA 3 and LLaMA 3.1 8B Instruct models under RAW settings and with Retrieval-Augmented Generation (RAG) applied. The bench-fn_data.pkl file contains examples from the full-text annotation dataset of UC Berkeley, which are used in this evaluation. The Python scripts for evaluating these annotated examples can be found in the evaluation_bench_anno directory.
+```bash
+#Activate the virtual environment
+source .venv/bin/activate
+
+# RAW Llama 3 8B Instruct
+python3 eval_llama3_raw.py
+
+# RAW Llama 3.1 8B Instruct
+python3 eval_llama3_1_raw.py
+
+# RAG Llama 3 8B Instruct
+python3 eval_rag_llama3.py
+
+# RAG Llama 3.1 8B Instruct
+python3 eval_rag_llama3_1.py
+
+#leaving virtual environment
+deactivate
+```
+
+The evaluation process consists of the following steps:
+
+1. **Random Selection of an Example:**  
+   The Python script randomly selects an example from the `bench-fn_data.pkl` file.
+
+2. **Annotated JSON Generation:**  
+   The selected example is annotated using the Large Language Model (LLM).
+
+3. **Scoring with a Custom Metric:**  
+   The generated annotated JSON object is compared against the true annotation using a custom metric function to evaluate the model's performance.
+
+4. **Output:**  
+   For each evaluated example, the script prints the following:
+   - The **prompt** used for generating the annotation.
+   - The **generated annotation** by the LLM.
+   - The **true annotation** from the dataset.
+   - The **scores** calculated based on the custom metric.
 
 ## Fulltext Annotation Parser
 
@@ -170,3 +212,4 @@ pip install protobuf && python $TRANSFORM --input_dir ${path_to_meta_downloaded_
 ```bash
 python3 main.py
 ```
+
