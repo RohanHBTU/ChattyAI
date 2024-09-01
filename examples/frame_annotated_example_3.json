@@ -1,0 +1,1332 @@
+{
+    "Rules to annotate a sentence based on framenet": "Imagine you are an expert in FrameNet annotations. Your task is to annotate sentences provided by the user, ensuring that each annotation conforms to the given JSON schema. Make sure your output is formatted correctly as a JSON object.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"Day succeeded day , and my friend took no step forward .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Day succeeded day , and my friend took no step forward .",
+                "frame annotations": [
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "Day",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "Day",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "day",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "day",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "Day",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "day",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Personal_relationship",
+                        "lexical token": "friend",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Partner_1",
+                                "token": "friend",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Partner_2",
+                                "token": "my",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Self_motion",
+                        "lexical token": "step",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Self_mover",
+                                "token": "my friend",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Direction",
+                                "token": "forward",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Relative_time",
+                        "lexical token": "succeeded",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Focal_occasion",
+                                "token": "Day",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Landmark_occasion",
+                                "token": "day",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"In January 2004 , a delegation of American private citizens confirmed that the cannisters in the temporary storage pond were empty .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "In January 2004 , a delegation of American private citizens confirmed that the cannisters in the temporary storage pond were empty .",
+                "frame annotations": [
+                    {
+                        "frame name": "People_by_jurisdiction",
+                        "lexical token": "citizens",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "citizens",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Jurisdiction",
+                                "token": "American",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "private",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Verification",
+                        "lexical token": "confirmed",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unconfirmed_content",
+                                "token": "that the cannisters in the temporary storage pond were empty",
+                                "span": [
+                                    11,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In January 2004",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Inspector",
+                                "token": "a delegation of American private citizens",
+                                "span": [
+                                    4,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fullness",
+                        "lexical token": "empty",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Container",
+                                "token": "the cannisters in the temporary storage pond",
+                                "span": [
+                                    12,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Storing",
+                        "lexical token": "storage",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Origin",
+                        "lexical token": "American",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "private citizens",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "American",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"The Benefication and Hydrometallurgical Research Center ( BHRC ) operates facilities involved in the production of yellowcake .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "The Benefication and Hydrometallurgical Research Center ( BHRC ) operates facilities involved in the production of yellowcake .",
+                "frame annotations": [
+                    {
+                        "frame name": "Participation",
+                        "lexical token": "involved",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "in the production of yellowcake",
+                                "span": [
+                                    12,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Participant_1",
+                                "token": "facilities",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "production",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "of yellowcake",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facilities",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Operating_a_system",
+                        "lexical token": "operates",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "System",
+                                "token": "facilities involved in the production of yellowcake",
+                                "span": [
+                                    10,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Operator",
+                                "token": "The Benefication and Hydrometallurgical Research Center ( BHRC )",
+                                "span": [
+                                    0,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "yellowcake",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "yellowcake",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"The psychology or ideology of a particular terrorist group or individual may lead to a fascination with poisons and disease .\".": {
+                "sentence": "The psychology or ideology of a particular terrorist group or individual may lead to a fascination with poisons and disease .",
+                "frame annotations": [
+                    {
+                        "frame name": "Idiosyncrasy",
+                        "lexical token": "particular",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Idiosyncrasy",
+                                "token": "terrorist group or individual",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "group",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "group",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "terrorist",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "individual",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Causation",
+                        "lexical token": "lead",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Effect",
+                                "token": "a fascination with poisons and disease",
+                                "span": [
+                                    14,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Cause",
+                                "token": "The psychology or ideology of a particular terrorist group or individual",
+                                "span": [
+                                    0,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Toxic_substance",
+                        "lexical token": "poisons",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Toxic_substance",
+                                "token": "poisons",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Medical_conditions",
+                        "lexical token": "disease",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ailment",
+                                "token": "disease",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Terrorism",
+                        "lexical token": "terrorist",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Terrorist",
+                                "token": "terrorist",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Likelihood",
+                        "lexical token": "may",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "lead to a fascination with poisons and disease",
+                                "span": [
+                                    12,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "The psychology or ideology of a particular terrorist group or individual",
+                                "span": [
+                                    0,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"All members commanders as well as subordinates must obey these rules .\".": {
+                "sentence": "All members commanders as well as subordinates must obey these rules .",
+                "frame annotations": [
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "All",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "All",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "members commanders as well as subordinates",
+                                "span": [
+                                    1,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Subordinates_and_superiors",
+                        "lexical token": "subordinates",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subordinate",
+                                "token": "subordinates",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Required_event",
+                        "lexical token": "must",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Required_situation",
+                                "token": "All members commanders as well as subordinates",
+                                "span": [
+                                    0,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Required_situation",
+                                "token": "obey these rules",
+                                "span": [
+                                    8,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Compliance",
+                        "lexical token": "obey",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Norm",
+                                "token": "these rules",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Protagonist",
+                                "token": "All members commanders as well as subordinates",
+                                "span": [
+                                    0,
+                                    6
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"The ports are within hiking distance of several beautiful beaches , and within a one - hour hike of each other on a marked trail .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "The ports are within hiking distance of several beautiful beaches , and within a one - hour hike of each other on a marked trail .",
+                "frame annotations": [
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "ports",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "ports",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Within_distance",
+                        "lexical token": "within",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "The ports",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "hiking distance",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "of several beautiful beaches",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "The ports",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "a one - hour hike",
+                                "span": [
+                                    13,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "of each other",
+                                "span": [
+                                    18,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Self_motion",
+                        "lexical token": "hiking",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Distance",
+                                "token": "one - hour",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Range",
+                        "lexical token": "distance",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "hiking",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "distance",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "several",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Individuals",
+                                "token": "beautiful beaches",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Quantity",
+                                "token": "several",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aesthetics",
+                        "lexical token": "beautiful",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "beaches",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "beaches",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "beaches",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "beautiful",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Within_distance",
+                        "lexical token": "within",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "The ports",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "hiking distance",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "of several beautiful beaches",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "The ports",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "a one - hour hike",
+                                "span": [
+                                    13,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "of each other",
+                                "span": [
+                                    18,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "one",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Number",
+                                "token": "one",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "hour",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "hour",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "hour",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Count",
+                                "token": "one",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Process",
+                                "token": "hike",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Self_motion",
+                        "lexical token": "hike",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Distance",
+                                "token": "one - hour",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Spatial_contact",
+                        "lexical token": "on",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "a marked trail",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "a one - hour hike",
+                                "span": [
+                                    13,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Roadways",
+                        "lexical token": "trail",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Roadway",
+                                "token": "trail",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Characteristic",
+                                "token": "marked",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"QN : Did officials from China make land available for a new hospital ?\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "QN : Did officials from China make land available for a new hospital ?",
+                "frame annotations": [
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "officials",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "officials",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Governed",
+                                "token": "from China",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "hospital",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "hospital",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Familiarity",
+                        "lexical token": "new",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "hospital",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"I made a free house call for you doctor .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "I made a free house call for you doctor .",
+                "frame annotations": [
+                    {
+                        "frame name": "Expensiveness",
+                        "lexical token": "free",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Intended_event",
+                                "token": "house call",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "house",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "house",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Visiting",
+                        "lexical token": "call",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "house",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Medical_professionals",
+                        "lexical token": "doctor",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Professional",
+                                "token": "doctor",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"4 BILL : Right .\".": {
+                "sentence": "4 BILL : Right .",
+                "frame annotations": [
+                    {
+                        "frame name": "Correctness",
+                        "lexical token": "Right",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"On the way the plane stopped in Rome .\".": {
+                "sentence": "On the way the plane stopped in Rome .",
+                "frame annotations": [
+                    {
+                        "frame name": "Halt",
+                        "lexical token": "stopped",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Depictive",
+                                "token": "On the way",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "the plane",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "in Rome",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "plane",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "plane",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

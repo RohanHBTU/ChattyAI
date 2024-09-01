@@ -1,0 +1,2869 @@
+{
+    "Rules to annotate a sentence based on framenet": "You are a FrameNet expert tasked with annotating sentences in JSON format. Your output should strictly adhere to the JSON schema provided or if available in the user prompt.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"Except for the gas tank at Hustead 's Towing Service exploding and burning in downtown Berkeley , things here are quite peaceful .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Except for the gas tank at Hustead 's Towing Service exploding and burning in downtown Berkeley , things here are quite peaceful .",
+                "frame annotations": [
+                    {
+                        "frame name": "Containers",
+                        "lexical token": "tank",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Container",
+                                "token": "tank",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "gas",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "at Hustead 's Towing Service",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "downtown Berkeley",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the gas tank at Hustead 's Towing Service exploding and burning",
+                                "span": [
+                                    2,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "gas",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "gas",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "downtown",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "downtown",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "Berkeley",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "here",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "things",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "are quite peaceful",
+                                "span": [
+                                    19,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "here",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"The `` Hsin Chu `` program involved procurement and operation of a heavy water reactor , a heavy water production plant , a reprocessing research laboratory , and a plutonium separation plant .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "The `` Hsin Chu `` program involved procurement and operation of a heavy water reactor , a heavy water production plant , a reprocessing research laboratory , and a plutonium separation plant .",
+                "frame annotations": [
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "`` Hsin Chu ``",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Using",
+                        "lexical token": "operation",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "of a heavy water reactor , a heavy water production plant , a reprocessing research laboratory , and a plutonium separation plant",
+                                "span": [
+                                    10,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "plant",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "plutonium separation",
+                                "span": [
+                                    29,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "laboratory",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "reprocessing research",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water production",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "reactor",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "laboratory",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "plutonium separation",
+                                "span": [
+                                    29,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "laboratory",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "reprocessing research",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water production",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "reactor",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "plant",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "plutonium separation",
+                                "span": [
+                                    29,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "laboratory",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "reprocessing research",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water production",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "reactor",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "production",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "heavy water",
+                                "span": [
+                                    17,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "reactor",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "plutonium separation",
+                                "span": [
+                                    29,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "laboratory",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "reprocessing research",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water production",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plant",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "reactor",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "heavy water",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Research",
+                        "lexical token": "research",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "reprocessing",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Processing_materials",
+                        "lexical token": "reprocessing",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "procurement",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "of a heavy water reactor , a heavy water production plant , a reprocessing research laboratory , and a plutonium separation plant",
+                                "span": [
+                                    10,
+                                    31
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"A uranium - based bomb program requires capabilities to mine and mill uranium , and to enrich it to weapons - grade or near - weapons - grade ( the Hiroshima bomb used less - than - weapons - grade uranium ) .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "A uranium - based bomb program requires capabilities to mine and mill uranium , and to enrich it to weapons - grade or near - weapons - grade ( the Hiroshima bomb used less - than - weapons - grade uranium ) .",
+                "frame annotations": [
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "uranium",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    40,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "bomb",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "uranium - based",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "Hiroshima",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "uranium - based bomb",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Have_as_requirement",
+                        "lexical token": "requires",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Dependent",
+                                "token": "A uranium - based bomb program",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Requirement",
+                                "token": "capabilities to mine and mill uranium , and to enrich it to weapons - grade or near - weapons - grade ( the Hiroshima bomb used less - than - weapons - grade uranium )",
+                                "span": [
+                                    7,
+                                    41
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "capabilities",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "to mine and mill uranium , and to enrich it to weapons - grade or near - weapons - grade",
+                                "span": [
+                                    8,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Grinding",
+                        "lexical token": "mill",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Patient",
+                                "token": "uranium",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "uranium",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    40,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Processing_materials",
+                        "lexical token": "enrich",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Material",
+                                "token": "it",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Result",
+                                "token": "to weapons - grade or near - weapons - grade",
+                                "span": [
+                                    18,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "uranium - based",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "Hiroshima",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "uranium - based",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "Hiroshima",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "bomb",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "uranium - based",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "Hiroshima",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            37,
+                            37
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "uranium - based",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "Hiroshima",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "uranium",
+                        "span": [
+                            40,
+                            40
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    40,
+                                    40
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"In 1996 , it held the first regional seminar on the national implementation of the CWC in Tehran so that government authorities could familiarize themselves with their duties and obligations under the treaty .\".": {
+                "sentence": "In 1996 , it held the first regional seminar on the national implementation of the CWC in Tehran so that government authorities could familiarize themselves with their duties and obligations under the treaty .",
+                "frame annotations": [
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "authorities",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "authorities",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "government",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Organization",
+                        "lexical token": "government",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Organization",
+                                "token": "government",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "could",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "government authorities",
+                                "span": [
+                                    20,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "familiarize themselves with their duties and obligations under the treaty",
+                                "span": [
+                                    23,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_obligated",
+                        "lexical token": "duties",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duty",
+                                "token": "duties",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Responsible_party",
+                                "token": "their",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Condition",
+                                "token": "under the treaty",
+                                "span": [
+                                    30,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Duty",
+                                "token": "obligations",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Responsible_party",
+                                "token": "their",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Condition",
+                                "token": "under the treaty",
+                                "span": [
+                                    30,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_obligated",
+                        "lexical token": "obligations",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duty",
+                                "token": "duties",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Responsible_party",
+                                "token": "their",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Condition",
+                                "token": "under the treaty",
+                                "span": [
+                                    30,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Duty",
+                                "token": "obligations",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Responsible_party",
+                                "token": "their",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Condition",
+                                "token": "under the treaty",
+                                "span": [
+                                    30,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Be_in_agreement_on_action",
+                        "lexical token": "treaty",
+                        "span": [
+                            32,
+                            32
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Second , if the key assumption is valid , Democrats should have lower attendance rates on roll-call votes than Republicans do to the extent that such votes reflect national policy making and that participating in such votes takes away from the time a legislator could otherwise devote to local benefit-seeking .\".": {
+                "sentence": "Second , if the key assumption is valid , Democrats should have lower attendance rates on roll-call votes than Republicans do to the extent that such votes reflect national policy making and that participating in such votes takes away from the time a legislator could otherwise devote to local benefit-seeking .",
+                "frame annotations": [
+                    {
+                        "frame name": "Importance",
+                        "lexical token": "key",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Factor",
+                                "token": "assumption",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Position_on_a_scale",
+                        "lexical token": "lower",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "rates",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Value",
+                                "token": "lower",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "than Republicans do",
+                                "span": [
+                                    18,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "lower",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "national",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "national",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "local",
+                                "span": [
+                                    48,
+                                    48
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Participation",
+                        "lexical token": "participating",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "in such votes",
+                                "span": [
+                                    34,
+                                    36
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "local",
+                        "span": [
+                            48,
+                            48
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "national",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "local",
+                                "span": [
+                                    48,
+                                    48
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_create",
+                        "lexical token": "making",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Created_entity",
+                                "token": "national policy",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Have_associated",
+                        "lexical token": "have",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topical_entity",
+                                "token": "Democrats",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "lower attendance rates on roll-call votes than Republicans do",
+                                "span": [
+                                    12,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Circumstances",
+                                "token": "if the key assumption is valid",
+                                "span": [
+                                    2,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Law",
+                        "lexical token": "policy",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Law",
+                                "token": "policy",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Jurisdiction",
+                                "token": "national",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "legislator",
+                        "span": [
+                            43,
+                            43
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "legislator",
+                                "span": [
+                                    43,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "time",
+                        "span": [
+                            41,
+                            41
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "time",
+                                "span": [
+                                    41,
+                                    41
+                                ]
+                            },
+                            {
+                                "frame element": "Process",
+                                "token": "a legislator could otherwise devote to local benefit-seeking",
+                                "span": [
+                                    42,
+                                    49
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attending",
+                        "lexical token": "attendance",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Being_in_effect",
+                        "lexical token": "valid",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Binding_principle",
+                                "token": "the key assumption",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Removing",
+                        "lexical token": "takes",
+                        "span": [
+                            37,
+                            37
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "participating in such votes",
+                                "span": [
+                                    33,
+                                    36
+                                ]
+                            },
+                            {
+                                "frame element": "Direction",
+                                "token": "away",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from the time a legislator could otherwise devote to local benefit-seeking",
+                                "span": [
+                                    39,
+                                    49
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ordinal_numbers",
+                        "lexical token": "Second",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Goal",
+                        "lexical token": "to",
+                        "span": [
+                            47,
+                            47
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark",
+                                "token": "local benefit-seeking",
+                                "span": [
+                                    48,
+                                    49
+                                ]
+                            },
+                            {
+                                "frame element": "Trajector",
+                                "token": "the time",
+                                "span": [
+                                    40,
+                                    41
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possibility",
+                        "lexical token": "could",
+                        "span": [
+                            44,
+                            44
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possible_event",
+                                "token": "a legislator",
+                                "span": [
+                                    42,
+                                    43
+                                ]
+                            },
+                            {
+                                "frame element": "Explanation",
+                                "token": "otherwise",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            },
+                            {
+                                "frame element": "Possible_event",
+                                "token": "devote to local benefit-seeking",
+                                "span": [
+                                    46,
+                                    49
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"Also in 1976 , the government signed a $700 million contract to purchase uranium yellowcake from South Africa and sent Iranian technicians abroad for training in nuclear sciences .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Also in 1976 , the government signed a $700 million contract to purchase uranium yellowcake from South Africa and sent Iranian technicians abroad for training in nuclear sciences .",
+                "frame annotations": [
+                    {
+                        "frame name": "Sign_agreement",
+                        "lexical token": "signed",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "in 1976",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Signatory",
+                                "token": "the government",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Agreement",
+                                "token": "a $700 million contract to purchase uranium yellowcake from South Africa",
+                                "span": [
+                                    7,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Documents",
+                        "lexical token": "contract",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Document",
+                                "token": "contract",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Obligation",
+                                "token": "to purchase uranium yellowcake from South Africa",
+                                "span": [
+                                    11,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Specification",
+                                "token": "$700 million",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Commerce_buy",
+                        "lexical token": "purchase",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goods",
+                                "token": "uranium yellowcake",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Seller",
+                                "token": "from South Africa",
+                                "span": [
+                                    15,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sending",
+                        "lexical token": "sent",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "in 1976",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Sender",
+                                "token": "the government",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "Iranian technicians",
+                                "span": [
+                                    20,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "abroad",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "for training in nuclear sciences",
+                                "span": [
+                                    23,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Origin",
+                        "lexical token": "Iranian",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Origin",
+                                "token": "Iranian",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "technicians",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "training",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subject",
+                                "token": "in nuclear sciences",
+                                "span": [
+                                    25,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Craft",
+                        "lexical token": "sciences",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Organization",
+                        "lexical token": "government",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Organization",
+                                "token": "government",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "uranium",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "yellowcake",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "uranium",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_vocation",
+                        "lexical token": "technicians",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "technicians",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "Iranian",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "yellowcake",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "uranium",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "yellowcake",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "uranium",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Please help Goodwill and help people find jobs .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Please help Goodwill and help people find jobs .",
+                "frame annotations": [
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "help",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "Goodwill",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "people",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "find jobs",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "people",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "people",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locating",
+                        "lexical token": "find",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Perceiver",
+                                "token": "people",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Sought_entity",
+                                "token": "jobs",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "jobs",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "help",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "Goodwill",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "people",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "find jobs",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Putin submits nuclear terrorism convention for ratification\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Putin submits nuclear terrorism convention for ratification",
+                "frame annotations": [
+                    {
+                        "frame name": "Submitting_documents",
+                        "lexical token": "submits",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Submittor",
+                                "token": "Putin",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Documents",
+                                "token": "nuclear terrorism convention",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Imposed_purpose",
+                                "token": "for ratification",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "nuclear",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Terrorism",
+                        "lexical token": "terrorism",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Act",
+                                "token": "terrorism",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Instrument",
+                                "token": "nuclear",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ratification",
+                        "lexical token": "ratification",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Be_in_agreement_on_action",
+                        "lexical token": "convention",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "nuclear terrorism",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Obligation",
+                                "token": "convention",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"In 1994 Pleasant Run served 346 children and 125 families .\".": {
+                "sentence": "In 1994 Pleasant Run served 346 children and 125 families .",
+                "frame annotations": [
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "In",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_period",
+                                "token": "1994",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "Pleasant Run served 346 children and 125 families",
+                                "span": [
+                                    2,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "served",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Helper",
+                                "token": "Pleasant Run",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In 1994",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "346 children and 125 families",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_age",
+                        "lexical token": "children",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "children",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Kinship",
+                        "lexical token": "families",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Relatives",
+                                "token": "families",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"South Africa is the first and , to date , only country to build a nuclear arsenal , and then voluntarily dismantle its entire nuclear weapons program .\".": {
+                "sentence": "South Africa is the first and , to date , only country to build a nuclear arsenal , and then voluntarily dismantle its entire nuclear weapons program .",
+                "frame annotations": [
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "country",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "country",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Building",
+                        "lexical token": "build",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "the first and , to date , only country",
+                                "span": [
+                                    3,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Created_entity",
+                                "token": "a nuclear arsenal , and then voluntarily dismantle its entire nuclear weapons program",
+                                "span": [
+                                    14,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "nuclear",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "arsenal",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Destroying",
+                        "lexical token": "dismantle",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Destroyer",
+                                "token": "the first and , to date , only country",
+                                "span": [
+                                    3,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "its entire nuclear weapons program",
+                                "span": [
+                                    22,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "voluntarily",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "nuclear",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Project",
+                                "token": "program",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "its",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Continued_state_of_affairs",
+                        "lexical token": "to",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_occasion",
+                                "token": "to date",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "only country to build a nuclear arsenal , and then voluntarily dismantle its entire nuclear weapons program",
+                                "span": [
+                                    10,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "South Africa is the first and",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Continued_state_of_affairs",
+                        "lexical token": "date",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_occasion",
+                                "token": "to date",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "only country to build a nuclear arsenal , and then voluntarily dismantle its entire nuclear weapons program",
+                                "span": [
+                                    10,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "South Africa is the first and",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ranked_expectation",
+                        "lexical token": "entire",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "program",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sole_instance",
+                        "lexical token": "only",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "country",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "the",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "only country",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ordinal_numbers",
+                        "lexical token": "first",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "country",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "the first",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "country",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

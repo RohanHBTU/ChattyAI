@@ -1,0 +1,1919 @@
+{
+    "Rules to annotate a sentence based on framenet": "As a FrameNet specialist, annotate the given sentences following FrameNet's rules. Your annotations must be in JSON format, strictly adhering to the JSON schema included in the instructions.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"The pilot perished in the crash .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "The pilot perished in the crash .",
+                "frame annotations": [
+                    {
+                        "frame name": "Death",
+                        "lexical token": "perished",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Containing_event",
+                                "token": "in the crash",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Protagonist",
+                                "token": "The pilot",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Explanation",
+                                "token": "in the crash",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Biological Possesses expertise and infrastructure to support biological warfare program .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Biological Possesses expertise and infrastructure to support biological warfare program .",
+                "frame annotations": [
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "Possesses",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possession",
+                                "token": "expertise and infrastructure to support biological warfare program",
+                                "span": [
+                                    2,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Expertise",
+                        "lexical token": "expertise",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Skill",
+                                "token": "to support biological warfare program",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "biological warfare",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Hostile_encounter",
+                        "lexical token": "warfare",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "biological",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Infrastructure",
+                        "lexical token": "infrastructure",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "to support biological warfare program",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Drumheller told the Post he was surprised when a few days later , on February 5, 2003 , Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Drumheller told the Post he was surprised when a few days later , on February 5, 2003 , Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                "frame annotations": [
+                    {
+                        "frame name": "Telling",
+                        "lexical token": "told",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Drumheller",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "the Post",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "he was surprised when a few days later , on February 5, 2003 , Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    4,
+                                    39
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "a few days later",
+                                "span": [
+                                    8,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "on February 5, 2003",
+                                "span": [
+                                    13,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Speaker",
+                                "token": "Powell",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "the U.N. Security Council",
+                                "span": [
+                                    20,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    24,
+                                    39
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Experiencer_obj",
+                        "lexical token": "surprised",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Experiencer",
+                                "token": "he",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Circumstances",
+                                "token": "when a few days later , on February 5, 2003 , Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    7,
+                                    39
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "days",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "days",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Count",
+                                "token": "a few",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Telling",
+                        "lexical token": "told",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Drumheller",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "the Post",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "he was surprised when a few days later , on February 5, 2003 , Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    4,
+                                    39
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "a few days later",
+                                "span": [
+                                    8,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "on February 5, 2003",
+                                "span": [
+                                    13,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Speaker",
+                                "token": "Powell",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "the U.N. Security Council",
+                                "span": [
+                                    20,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    24,
+                                    39
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Communicate_categorization",
+                        "lexical token": "descriptions",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "of biological weapons factories on wheels and rails",
+                                "span": [
+                                    30,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "biological",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    31,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            32,
+                            32
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    31,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "factories",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "factories",
+                                "span": [
+                                    33,
+                                    33
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "biological weapons",
+                                "span": [
+                                    31,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Artifact",
+                        "lexical token": "wheels",
+                        "span": [
+                            35,
+                            35
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Artifact",
+                                "token": "wheels",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "have",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Owner",
+                                "token": "we",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "first-hand descriptions of biological weapons factories on wheels and rails",
+                                "span": [
+                                    28,
+                                    37
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "a",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "a few",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "days",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "few",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "a few",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "days",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Time_vector",
+                        "lexical token": "later",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_event",
+                                "token": "Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails",
+                                "span": [
+                                    18,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "a few days",
+                                "span": [
+                                    8,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "he was surprised",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "when",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "he was surprised",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Landmark_event",
+                                "token": "Powell told the U.N. Security Council that `` we have first-hand descriptions of biological weapons factories on wheels and rails . ''",
+                                "span": [
+                                    18,
+                                    39
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Most of these claims can not be verified in open sources .\".": {
+                "sentence": "Most of these claims can not be verified in open sources .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "claims",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Verification",
+                        "lexical token": "verified",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unconfirmed_content",
+                                "token": "Most of these claims",
+                                "span": [
+                                    0,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "in open sources",
+                                "span": [
+                                    8,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Source_of_getting",
+                        "lexical token": "sources",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "open",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Secrecy_status",
+                        "lexical token": "open",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "sources",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Thousands of people arrived with little more than the clothes they wore , putting great strain on the resources of the islands .\".": {
+                "sentence": "Thousands of people arrived with little more than the clothes they wore , putting great strain on the resources of the islands .",
+                "frame annotations": [
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "Thousands",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "Thousands",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "of people",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "people",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "people",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "arrived",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "Thousands of people",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Depictive",
+                                "token": "with little more than the clothes they wore",
+                                "span": [
+                                    4,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Re-encoding",
+                                "token": "putting great strain on the resources of the islands",
+                                "span": [
+                                    13,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "islands",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "islands",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Increment",
+                        "lexical token": "more",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Increment",
+                                "token": "little",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Class",
+                                "token": "than the clothes they wore",
+                                "span": [
+                                    7,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Added_set",
+                                "token": "more than the clothes they wore",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Clothing",
+                        "lexical token": "clothes",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Garment",
+                                "token": "clothes",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Wearer",
+                                "token": "they",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Placing",
+                        "lexical token": "putting",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "great strain",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "on the resources of the islands",
+                                "span": [
+                                    16,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Cause",
+                                "token": "Thousands of people arrived with little more than the clothes they wore",
+                                "span": [
+                                    0,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Wearing",
+                        "lexical token": "wore",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Wearer",
+                                "token": "they",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Clothing",
+                                "token": "the clothes",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"QN : Were there sanctions against Iraq ?\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "QN : Were there sanctions against Iraq ?",
+                "frame annotations": [
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "there",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "sanctions against Iraq",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "Were",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "sanctions against Iraq",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Revenge",
+                        "lexical token": "sanctions",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Offender",
+                                "token": "against Iraq",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Punishment",
+                                "token": "sanctions",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Furthermore , Iran clearly possesses technology useful for producing biological weapons ( as will be elucidated in the Facilities section of this profile ) .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Furthermore , Iran clearly possesses technology useful for producing biological weapons ( as will be elucidated in the Facilities section of this profile ) .",
+                "frame annotations": [
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "possesses",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Owner",
+                                "token": "Iran",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "technology useful for producing biological weapons",
+                                "span": [
+                                    5,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_whole",
+                        "lexical token": "section",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "of this profile",
+                                "span": [
+                                    20,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Part_prop",
+                                "token": "Facilities",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "section",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Artifact",
+                        "lexical token": "technology",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Artifact",
+                                "token": "technology",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "useful for producing biological weapons",
+                                "span": [
+                                    6,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "producing",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "biological weapons",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "biological",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Usefulness",
+                        "lexical token": "useful",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "technology",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "for producing biological weapons",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"He said that it would he possible for the companies working in the electronic trade sector to make Dubai their headquarters , and to establish offices here and provide employment and own machinery in the zone opened to companies fully owned by the foreigners .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "He said that it would he possible for the companies working in the electronic trade sector to make Dubai their headquarters , and to establish offices here and provide employment and own machinery in the zone opened to companies fully owned by the foreigners .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "said",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that it would he possible for the companies working in the electronic trade sector to make Dubai their headquarters , and to establish offices here and provide employment and own machinery in the zone opened to companies fully owned by the foreigners",
+                                "span": [
+                                    2,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Likelihood",
+                        "lexical token": "possible",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "for the companies working in the electronic trade sector to make Dubai their headquarters , and to establish offices here and provide employment and own machinery in the zone opened to companies fully owned by the foreigners",
+                                "span": [
+                                    7,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Businesses",
+                        "lexical token": "companies",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Business",
+                                "token": "companies",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Business",
+                                "token": "companies",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "working",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Field",
+                                "token": "in the electronic trade sector",
+                                "span": [
+                                    11,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Employee",
+                                "token": "companies",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fields",
+                        "lexical token": "sector",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "electronic trade",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_change",
+                        "lexical token": "make",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Dubai",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Final_category",
+                                "token": "their headquarters",
+                                "span": [
+                                    19,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "the companies working in the electronic trade sector",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_create",
+                        "lexical token": "establish",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Created_entity",
+                                "token": "offices",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "here",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Creator",
+                                "token": "the companies working in the electronic trade sector",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "provide",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Supplier",
+                                "token": "the companies working in the electronic trade sector",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "employment",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "in the zone opened to companies fully owned by the foreigners",
+                                "span": [
+                                    33,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "own",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possession",
+                                "token": "machinery",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Owner",
+                                "token": "the companies working in the electronic trade sector",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "companies",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            },
+                            {
+                                "frame element": "Owner",
+                                "token": "by the foreigners",
+                                "span": [
+                                    41,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "the zone opened to companies fully owned by the foreigners",
+                                "span": [
+                                    34,
+                                    43
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "provide employment and own machinery",
+                                "span": [
+                                    28,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "zone",
+                        "span": [
+                            35,
+                            35
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "zone",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            },
+                            {
+                                "frame element": "Formational_cause",
+                                "token": "opened to companies fully owned by the foreigners",
+                                "span": [
+                                    36,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Businesses",
+                        "lexical token": "companies",
+                        "span": [
+                            38,
+                            38
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Business",
+                                "token": "companies",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Business",
+                                "token": "companies",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "owned",
+                        "span": [
+                            40,
+                            40
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possession",
+                                "token": "machinery",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Owner",
+                                "token": "the companies working in the electronic trade sector",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "companies",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            },
+                            {
+                                "frame element": "Owner",
+                                "token": "by the foreigners",
+                                "span": [
+                                    41,
+                                    43
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_origin",
+                        "lexical token": "foreigners",
+                        "span": [
+                            43,
+                            43
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "foreigners",
+                                "span": [
+                                    43,
+                                    43
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "foreigners",
+                                "span": [
+                                    43,
+                                    43
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"It is silly libel on our teachers to think they would educate our children better if only they got a few thousand dollars a year more .\".": {
+                "sentence": "It is silly libel on our teachers to think they would educate our children better if only they got a few thousand dollars a year more .",
+                "frame annotations": [
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "teachers",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Teacher",
+                                "token": "teachers",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Teacher",
+                                "token": "they",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Student",
+                                "token": "our children",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "better",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Awareness",
+                        "lexical token": "think",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Content",
+                                "token": "they would educate our children better if only they got a few thousand dollars a year more",
+                                "span": [
+                                    9,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "educate",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Teacher",
+                                "token": "teachers",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Teacher",
+                                "token": "they",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Student",
+                                "token": "our children",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "better",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "got",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Recipient",
+                                "token": "they",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "a few thousand dollars a year more",
+                                "span": [
+                                    19,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Increment",
+                        "lexical token": "more",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Increment",
+                                "token": "a few thousand dollars a year",
+                                "span": [
+                                    19,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Added_set",
+                                "token": "a few thousand dollars a year more",
+                                "span": [
+                                    19,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Kinship",
+                        "lexical token": "children",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ego",
+                                "token": "our",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Alter",
+                                "token": "children",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "year",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "year",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Count",
+                                "token": "a",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "few",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "few thousand",
+                                "span": [
+                                    20,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Mass",
+                                "token": "dollars",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "thousand",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Number",
+                                "token": "thousand",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "dollars",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Precision",
+                                "token": "few",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"The U.S. delegation was led by Ambassador Henry Crumpton , Coordinator for Counterterrorism , at the State Department `` ( Outlook India , 21Apr06, PTI ) http://www.outlookindia.com/pti_print.asp ? id=379468\".": {
+                "sentence": "The U.S. delegation was led by Ambassador Henry Crumpton , Coordinator for Counterterrorism , at the State Department `` ( Outlook India , 21Apr06, PTI ) http://www.outlookindia.com/pti_print.asp ? id=379468",
+                "frame annotations": [
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "led",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Governed",
+                                "token": "The U.S. delegation",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "by Ambassador Henry Crumpton , Coordinator for Counterterrorism , at the State Department",
+                                "span": [
+                                    5,
+                                    17
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

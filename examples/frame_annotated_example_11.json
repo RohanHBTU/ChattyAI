@@ -1,0 +1,1594 @@
+{
+    "Rules to annotate a sentence based on framenet": "You are tasked with performing FrameNet annotations for sentence in the prompt. Ensure that your annotations follow FrameNet standards and are output in a JSON format that matches the schema specified in the prompt.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"During the Cold War , for example , the United States and the Soviet Union each supported sub - national groups engaged in proxy wars .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "During the Cold War , for example , the United States and the Soviet Union each supported sub - national groups engaged in proxy wars .",
+                "frame annotations": [
+                    {
+                        "frame name": "Taking_sides",
+                        "lexical token": "supported",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "the United States and the Soviet Union each",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Side",
+                                "token": "sub - national groups engaged in proxy wars",
+                                "span": [
+                                    17,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "groups",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate_property",
+                                "token": "sub - national",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate",
+                                "token": "groups",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_act",
+                        "lexical token": "engaged",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "sub - national groups",
+                                "span": [
+                                    17,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Act",
+                                "token": "in proxy wars",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Hostile_encounter",
+                        "lexical token": "wars",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Depictive",
+                                "token": "proxy",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "national",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "national",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Open - source assessments of North Korean chemical weapons stockpiles have changed significantly over the past decade .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Open - source assessments of North Korean chemical weapons stockpiles have changed significantly over the past decade .",
+                "frame annotations": [
+                    {
+                        "frame name": "Assessing",
+                        "lexical token": "assessments",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "of North Korean chemical weapons stockpiles",
+                                "span": [
+                                    4,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Assessor",
+                                "token": "assessments",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Depictive",
+                                "token": "Open - source",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "chemical",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Store",
+                        "lexical token": "stockpiles",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Resource",
+                                "token": "chemical weapons",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Supply",
+                                "token": "stockpiles",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Undergo_change",
+                        "lexical token": "changed",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Open - source assessments of North Korean chemical weapons stockpiles",
+                                "span": [
+                                    0,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "significantly",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "over the past decade",
+                                "span": [
+                                    13,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "decade",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Relative_time",
+                                "token": "past",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"All of these research areas have legitimate and important uses for improving crop yields and reducing the threat to Iran 's agricultural industry posed by pests and disease .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "All of these research areas have legitimate and important uses for improving crop yields and reducing the threat to Iran 's agricultural industry posed by pests and disease .",
+                "frame annotations": [
+                    {
+                        "frame name": "Importance",
+                        "lexical token": "important",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Factor",
+                                "token": "uses",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Undertaking",
+                                "token": "for improving crop yields and reducing the threat to Iran 's agricultural industry posed by pests and disease",
+                                "span": [
+                                    10,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "uses",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "for improving crop yields and reducing the threat to Iran 's agricultural industry posed by pests and disease",
+                                "span": [
+                                    10,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "All of these research areas",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Research",
+                        "lexical token": "research",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Fields",
+                        "lexical token": "industry",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "agricultural",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_change_of_position_on_a_scale",
+                        "lexical token": "reducing",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attribute",
+                                "token": "the threat to Iran 's agricultural industry posed by pests and disease",
+                                "span": [
+                                    16,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Legality",
+                        "lexical token": "legitimate",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Action",
+                                "token": "uses",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "crop",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "crop",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "have",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Owner",
+                                "token": "All of these research areas",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "legitimate and important uses for improving crop yields and reducing the threat to Iran 's agricultural industry posed by pests and disease",
+                                "span": [
+                                    6,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Medical_conditions",
+                        "lexical token": "disease",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Risky_situation",
+                        "lexical token": "threat",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Asset",
+                                "token": "to Iran 's agricultural industry",
+                                "span": [
+                                    18,
+                                    22
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"In 2004 , Syria responded to U.S. and U.K. pressure to relinquish its WMD by declaring that it is prepared to do so when Israel does the same .\".": {
+                "sentence": "In 2004 , Syria responded to U.S. and U.K. pressure to relinquish its WMD by declaring that it is prepared to do so when Israel does the same .",
+                "frame annotations": [
+                    {
+                        "frame name": "Response",
+                        "lexical token": "responded",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "In 2004",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Responding_entity",
+                                "token": "Syria",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Trigger",
+                                "token": "to U.S. and U.K. pressure to relinquish its WMD",
+                                "span": [
+                                    5,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Response",
+                                "token": "by declaring that it is prepared to do so when Israel does the same",
+                                "span": [
+                                    14,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attempt_suasion",
+                        "lexical token": "pressure",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "U.S. and U.K.",
+                                "span": [
+                                    6,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Content",
+                                "token": "to relinquish its WMD",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Surrendering_possession",
+                        "lexical token": "relinquish",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "its WMD",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Surrenderer",
+                                "token": "Syria",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "declaring",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Syria",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In 2004",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that it is prepared to do so when Israel does the same",
+                                "span": [
+                                    16,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Activity_ready_state",
+                        "lexical token": "prepared",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "to do so",
+                                "span": [
+                                    20,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Protagonist",
+                                "token": "it",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_act",
+                        "lexical token": "do",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Act",
+                                "token": "so",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "it",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "when Israel does the same",
+                                "span": [
+                                    23,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Israel",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Act",
+                                "token": "the same",
+                                "span": [
+                                    26,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_act",
+                        "lexical token": "does",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Act",
+                                "token": "so",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "it",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "when Israel does the same",
+                                "span": [
+                                    23,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Israel",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Act",
+                                "token": "the same",
+                                "span": [
+                                    26,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Identicality",
+                        "lexical token": "same",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Current_instance",
+                                "token": "same",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "WMD",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "WMD",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"\" So you see our savage friend was very orthodox in his ritual .\".": {
+                "sentence": "\" So you see our savage friend was very orthodox in his ritual .",
+                "frame annotations": [
+                    {
+                        "frame name": "Personal_relationship",
+                        "lexical token": "friend",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Partner_1",
+                                "token": "friend",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Partner_2",
+                                "token": "our",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Rite",
+                        "lexical token": "ritual",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "his",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"Primary among these are : The continued willingness of the Democratic People's Republic of Korea ( DPRK ) , the People's Republic of China ( PRC ) , and Russia to provide Iran with both missiles and missile - related technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR ) .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Primary among these are : The continued willingness of the Democratic People's Republic of Korea ( DPRK ) , the People's Republic of China ( PRC ) , and Russia to provide Iran with both missiles and missile - related technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR ) .",
+                "frame annotations": [
+                    {
+                        "frame name": "First_rank",
+                        "lexical token": "Primary",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Contrast_set",
+                                "token": "among these",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "The continued willingness of the Democratic People's Republic of Korea ( DPRK ) , the People's Republic of China ( PRC ) , and Russia to provide Iran with both missiles and missile - related technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR )",
+                                "span": [
+                                    5,
+                                    57
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "provide",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Supplier",
+                                "token": "the Democratic People's Republic of Korea ( DPRK ) , the People's Republic of China ( PRC ) , and Russia",
+                                "span": [
+                                    9,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Recipient",
+                                "token": "Iran",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "with both missiles and missile - related technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR )",
+                                "span": [
+                                    33,
+                                    57
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missiles",
+                        "span": [
+                            35,
+                            35
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cognitive_connection",
+                        "lexical token": "related",
+                        "span": [
+                            39,
+                            39
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Concept_2",
+                                "token": "missile",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Concept_1",
+                                "token": "technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR )",
+                                "span": [
+                                    40,
+                                    57
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Artifact",
+                        "lexical token": "technology",
+                        "span": [
+                            40,
+                            40
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Artifact",
+                                "token": "technology",
+                                "span": [
+                                    40,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "intentions",
+                        "span": [
+                            48,
+                            48
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "of the Missile Technology Control Regime ( MTCR )",
+                                "span": [
+                                    49,
+                                    57
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Willingness",
+                        "lexical token": "willingness",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "of the Democratic People's Republic of Korea ( DPRK ) , the People's Republic of China ( PRC ) , and Russia",
+                                "span": [
+                                    8,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "to provide Iran with both missiles and missile - related technology that at the very least exceed the intentions of the Missile Technology Control Regime ( MTCR )",
+                                "span": [
+                                    30,
+                                    57
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Taiwan has two SRBM programs .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Taiwan has two SRBM programs .",
+                "frame annotations": [
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "has",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Owner",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "two SRBM programs",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "programs",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "SRBM",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "two",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "SRBM programs",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Number",
+                                "token": "two",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Two natural rock formations are always pointed out on excursions .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Two natural rock formations are always pointed out on excursions .",
+                "frame annotations": [
+                    {
+                        "frame name": "Pattern",
+                        "lexical token": "formations",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entities",
+                                "token": "rock",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "natural",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Frequency",
+                        "lexical token": "always",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "Two natural rock formations are",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "pointed out on excursions",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Travel",
+                        "lexical token": "excursions",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Greece took this opportunity to absorb the islands of the northern and eastern Aegean and to add Macedonia to its mainland territories .\".": {
+                "sentence": "Greece took this opportunity to absorb the islands of the northern and eastern Aegean and to add Macedonia to its mainland territories .",
+                "frame annotations": [
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "islands",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "islands",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "of the northern and eastern Aegean",
+                                "span": [
+                                    8,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_orientational",
+                        "lexical token": "northern",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "northern",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "eastern Aegean",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_orientational",
+                        "lexical token": "eastern",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "northern",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "Aegean",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "eastern Aegean",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "territories",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "territories",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "mainland",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"He reigned from 37 to 4 b.c. , during which time he fortified the Hasmonean wall and rebuilt the defense towers beside Jaffa Gate , the foundation of which still stand .\".": {
+                "sentence": "He reigned from 37 to 4 b.c. , during which time he fortified the Hasmonean wall and rebuilt the defense towers beside Jaffa Gate , the foundation of which still stand .",
+                "frame annotations": [
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "reigned",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Duration",
+                                "token": "from 37 to 4 b.c.",
+                                "span": [
+                                    2,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_change_of_strength",
+                        "lexical token": "fortified",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "he",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "the Hasmonean wall",
+                                "span": [
+                                    13,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "during which time",
+                                "span": [
+                                    8,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "from 37 to 4 b.c.",
+                                "span": [
+                                    2,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Architectural_part",
+                        "lexical token": "wall",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "wall",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "Hasmonean",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Defending",
+                        "lexical token": "defense",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "towers",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "towers",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Function",
+                                "token": "defense",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Non-gradable_proximity",
+                        "lexical token": "beside",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "the defense towers",
+                                "span": [
+                                    18,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Jaffa Gate",
+                                "span": [
+                                    22,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Continued_state_of_affairs",
+                        "lexical token": "still",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "the foundation of which",
+                                "span": [
+                                    25,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "stand",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Posture",
+                        "lexical token": "stand",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "the foundation of which",
+                                "span": [
+                                    25,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Duration",
+                                "token": "still",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

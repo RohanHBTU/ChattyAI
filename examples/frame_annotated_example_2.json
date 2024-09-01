@@ -1,0 +1,2283 @@
+{
+    "Rules to annotate a sentence based on framenet": "You are a FrameNet expert tasked with annotating sentences in JSON format. Your output should strictly adhere to the JSON schema provided or if available in the user prompt.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"Can Iran produce nuclear weapons with its nuclear infrastructure ?\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Can Iran produce nuclear weapons with its nuclear infrastructure ?",
+                "frame annotations": [
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "produce",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Producer",
+                                "token": "Iran",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Product",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Instrument",
+                                "token": "with its nuclear infrastructure",
+                                "span": [
+                                    5,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "nuclear",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Infrastructure",
+                        "lexical token": "infrastructure",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "nuclear",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "its",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"According to one official , the fire started when ten students lit a bonfire on a ridge but failed to extinguish it .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "According to one official , the fire started when ten students lit a bonfire on a ridge but failed to extinguish it .",
+                "frame annotations": [
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "fire",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "fire",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Fire",
+                                "token": "bonfire",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "on a ridge",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Catching_fire",
+                        "lexical token": "started",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "the fire",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "when ten students lit a bonfire on a ridge but failed to extinguish it",
+                                "span": [
+                                    8,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Explanation",
+                                "token": "when ten students lit a bonfire on a ridge but failed to extinguish it",
+                                "span": [
+                                    8,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Setting_fire",
+                        "lexical token": "lit",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Kindler",
+                                "token": "ten students",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Flame",
+                                "token": "a bonfire",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "on a ridge",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attributed_information",
+                        "lexical token": "According",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "one official",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Proposition",
+                                "token": "the fire started when ten students lit a bonfire on a ridge but failed to extinguish it",
+                                "span": [
+                                    5,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "bonfire",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "fire",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Fire",
+                                "token": "bonfire",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "on a ridge",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Successful_action",
+                        "lexical token": "failed",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to extinguish it",
+                                "span": [
+                                    19,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Protagonist",
+                                "token": "ten students",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "official",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "official",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "students",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Student",
+                                "token": "students",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "ridge",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "ridge",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"It ferries commuters from the Mid-Levels apartment complexes downhill from 6 to 10 am , and uphill from 10 am to midnight .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "It ferries commuters from the Mid-Levels apartment complexes downhill from 6 to 10 am , and uphill from 10 am to midnight .",
+                "frame annotations": [
+                    {
+                        "frame name": "Bringing",
+                        "lexical token": "ferries",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Carrier",
+                                "token": "It",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "commuters",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from the Mid-Levels apartment complexes",
+                                "span": [
+                                    3,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Path",
+                                "token": "downhill",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Path",
+                                "token": "uphill",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Period_of_iterations",
+                                "token": "from 6 to 10 am",
+                                "span": [
+                                    9,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Period_of_iterations",
+                                "token": "from 10 am to midnight",
+                                "span": [
+                                    17,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Origin",
+                        "lexical token": "from",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "commuters",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "the Mid-Levels apartment complexes",
+                                "span": [
+                                    4,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Building_subparts",
+                        "lexical token": "apartment",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building_part",
+                                "token": "apartment",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "complexes",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "complexes",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "apartment",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "midnight",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "midnight",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Ferries depart from Central every two hours between 6:10 am and 10:30 pm to Silvermine Bay ( Mui Wo ) , where a bus terminal has buses to all parts of the island .\".": {
+                "sentence": "Ferries depart from Central every two hours between 6:10 am and 10:30 pm to Silvermine Bay ( Mui Wo ) , where a bus terminal has buses to all parts of the island .",
+                "frame annotations": [
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "Ferries",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "Ferries",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "bus",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "buses",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Itinerary",
+                                "token": "to all parts of the island",
+                                "span": [
+                                    27,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Departing",
+                        "lexical token": "depart",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "Ferries",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from Central",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Frequency",
+                                "token": "every two hours",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "between 6:10 am and 10:30 pm",
+                                "span": [
+                                    7,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to Silvermine Bay",
+                                "span": [
+                                    13,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "hours",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Count",
+                                "token": "two",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "hours",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "Bay",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Silvermine",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "Bay",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "island",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "bus",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "Ferries",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "bus",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "buses",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Itinerary",
+                                "token": "to all parts of the island",
+                                "span": [
+                                    27,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "terminal",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "terminal",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "bus",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Have_associated",
+                        "lexical token": "has",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topical_entity",
+                                "token": "a bus terminal",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "buses to all parts of the island",
+                                "span": [
+                                    26,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "buses",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "Ferries",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "bus",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Vehicle",
+                                "token": "buses",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Itinerary",
+                                "token": "to all parts of the island",
+                                "span": [
+                                    27,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "all",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "all",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "parts",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_whole",
+                        "lexical token": "parts",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "of the island",
+                                "span": [
+                                    30,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "parts",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Partitive",
+                        "lexical token": "of",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subset",
+                                "token": "all parts",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Group",
+                                "token": "the island",
+                                "span": [
+                                    31,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "island",
+                        "span": [
+                            32,
+                            32
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Silvermine",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "Bay",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "island",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Frequency",
+                        "lexical token": "every",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Interval",
+                                "token": "two hours",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "Ferries depart from Central",
+                                "span": [
+                                    0,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "between 6:10 am and 10:30 pm",
+                                "span": [
+                                    7,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Every time we help someone find a solution to their employment barrier , the positive effects radiate throughout our community : The business community welcomes not only another worker , but a consumer with increased purchasing power .\".": {
+                "sentence": "Every time we help someone find a solution to their employment barrier , the positive effects radiate throughout our community : The business community welcomes not only another worker , but a consumer with increased purchasing power .",
+                "frame annotations": [
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "help",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Helper",
+                                "token": "we",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "someone",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "find a solution to their employment barrier",
+                                "span": [
+                                    5,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Becoming_aware",
+                        "lexical token": "find",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "someone",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "a solution to their employment barrier",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "employment",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Objective_influence",
+                        "lexical token": "effects",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Degree",
+                                "token": "positive",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Emanating",
+                        "lexical token": "radiate",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Emission",
+                                "token": "the positive effects",
+                                "span": [
+                                    13,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "throughout our community",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "community",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "community",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate_property",
+                                "token": "our",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Businesses",
+                        "lexical token": "business",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Business",
+                                "token": "business",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "community",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "community",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "community",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate_property",
+                                "token": "our",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sole_instance",
+                        "lexical token": "only",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "another worker",
+                                "span": [
+                                    27,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "not",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Increment",
+                        "lexical token": "another",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Added_set",
+                                "token": "another",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Class",
+                                "token": "worker",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Employing",
+                        "lexical token": "worker",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Employee",
+                                "token": "worker",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "another",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Change_position_on_a_scale",
+                        "lexical token": "increased",
+                        "span": [
+                            34,
+                            34
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "purchasing power",
+                                "span": [
+                                    35,
+                                    36
+                                ]
+                            },
+                            {
+                                "frame element": "Attribute",
+                                "token": "increased",
+                                "span": [
+                                    34,
+                                    34
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"' There was excellent participation and cooperation .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "' There was excellent participation and cooperation .",
+                "frame annotations": [
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "There",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "excellent participation and cooperation",
+                                "span": [
+                                    3,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "was",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "excellent participation and cooperation",
+                                "span": [
+                                    3,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Desirability",
+                        "lexical token": "excellent",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "participation and cooperation",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Participation",
+                        "lexical token": "participation",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Degree_of_involvement",
+                                "token": "excellent",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Collaboration",
+                        "lexical token": "cooperation",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Degree",
+                                "token": "excellent",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Mr. Hammond worries that old age and the flightiness of youth will diminish the ranks of the East Anglian group that keeps the Aslacton bells pealing .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Mr. Hammond worries that old age and the flightiness of youth will diminish the ranks of the East Anglian group that keeps the Aslacton bells pealing .",
+                "frame annotations": [
+                    {
+                        "frame name": "Emotion_active",
+                        "lexical token": "worries",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Experiencer",
+                                "token": "Mr. Hammond",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "that old age and the flightiness of youth will diminish the ranks of the East Anglian group that keeps the Aslacton bells pealing",
+                                "span": [
+                                    3,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Age",
+                        "lexical token": "old",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attribute",
+                                "token": "age",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Age",
+                                "token": "old",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_change_of_position_on_a_scale",
+                        "lexical token": "diminish",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "old age and the flightiness of youth",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "the ranks of the East Anglian group that keeps the Aslacton bells pealing",
+                                "span": [
+                                    13,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Make_noise",
+                        "lexical token": "pealing",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Sound_source",
+                                "token": "the Aslacton bells",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_to_continue",
+                        "lexical token": "keeps",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Process",
+                                "token": "the Aslacton bells",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Process",
+                                "token": "pealing",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "the East Anglian group that",
+                                "span": [
+                                    16,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "group",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "group",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "East Anglian",
+                                "span": [
+                                    17,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Noise_makers",
+                        "lexical token": "bells",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Aslacton",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Noise_maker",
+                                "token": "bells",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Age",
+                        "lexical token": "age",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attribute",
+                                "token": "age",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Age",
+                                "token": "old",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_age",
+                        "lexical token": "youth",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "youth",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Dear Personal Donor :\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Dear Personal Donor :",
+                "frame annotations": [
+                    {
+                        "frame name": "Giving",
+                        "lexical token": "Donor",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Donor",
+                                "token": "Donor",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Depictive",
+                                "token": "Personal",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"He and his master dragged me to my room and held judgment upon me as a convicted traitress .\".": {
+                "sentence": "He and his master dragged me to my room and held judgment upon me as a convicted traitress .",
+                "frame annotations": [
+                    {
+                        "frame name": "Verdict",
+                        "lexical token": "convicted",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Defendant",
+                                "token": "traitress",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_motion",
+                        "lexical token": "dragged",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "He and his master",
+                                "span": [
+                                    0,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "me",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to my room",
+                                "span": [
+                                    6,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Building_subparts",
+                        "lexical token": "room",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building_part",
+                                "token": "room",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Legal_rulings",
+                        "lexical token": "judgment",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Authority",
+                                "token": "He and his master",
+                                "span": [
+                                    0,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Case",
+                                "token": "upon me",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Defendant",
+                                "token": "as a convicted traitress .",
+                                "span": [
+                                    14,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Subordinates_and_superiors",
+                        "lexical token": "master",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subordinate",
+                                "token": "his",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Her head hung listlessly upon her breast , but as she raised it and turned her dull eyes upon us I saw that her pupils were dark dots in the centre of the broad gray iris .\".": {
+                "sentence": "Her head hung listlessly upon her breast , but as she raised it and turned her dull eyes upon us I saw that her pupils were dark dots in the centre of the broad gray iris .",
+                "frame annotations": [
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "breast",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "breast",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "eyes",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "dull",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Her",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "head",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "pupils",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "eyes",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "breast",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "eyes",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "dull",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Her",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "head",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "pupils",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "head",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "breast",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "eyes",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "dull",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Her",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "head",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "pupils",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Perception_experience",
+                        "lexical token": "saw",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Perceiver_passive",
+                                "token": "I",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "that her pupils were dark dots in the centre of the broad gray iris .",
+                                "span": [
+                                    22,
+                                    36
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "pupils",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "breast",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "eyes",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "dull",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Her",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "head",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "her",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "pupils",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_inner_outer",
+                        "lexical token": "centre",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "centre",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "of the broad gray iris .",
+                                "span": [
+                                    31,
+                                    36
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Color_qualities",
+                        "lexical token": "dark",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Described_entity",
+                                "token": "dots",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measurable_attributes",
+                        "lexical token": "broad",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "iris",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            },
+                            {
+                                "frame element": "Attribute",
+                                "token": "broad",
+                                "span": [
+                                    33,
+                                    33
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Color",
+                        "lexical token": "gray",
+                        "span": [
+                            34,
+                            34
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "iris",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            },
+                            {
+                                "frame element": "Color",
+                                "token": "gray",
+                                "span": [
+                                    34,
+                                    34
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

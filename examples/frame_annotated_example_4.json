@@ -1,0 +1,2204 @@
+{
+    "Rules to annotate a sentence based on framenet": "Imagine you are an expert in FrameNet annotations. Your task is to annotate sentences provided by the user, ensuring that each annotation conforms to the given JSON schema. Make sure your output is formatted correctly as a JSON object.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"In an attempt to counter a threat from the Saracen Muslims , a new potent religious force from the East , the Byzantine army forcefully enlisted the men of the islands .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "In an attempt to counter a threat from the Saracen Muslims , a new potent religious force from the East , the Byzantine army forcefully enlisted the men of the islands .",
+                "frame annotations": [
+                    {
+                        "frame name": "Attempt",
+                        "lexical token": "attempt",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to counter a threat from the Saracen Muslims",
+                                "span": [
+                                    3,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Commitment",
+                        "lexical token": "threat",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "from the Saracen Muslims",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_religion",
+                        "lexical token": "Muslims",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "Muslims",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Ethnicity",
+                                "token": "Saracen",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Age",
+                        "lexical token": "new",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Age",
+                                "token": "new",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "potent religious force from the East",
+                                "span": [
+                                    14,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Military",
+                        "lexical token": "force",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Force",
+                                "token": "force",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Domain",
+                                "token": "religious",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "from the East",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "new potent",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Force",
+                                "token": "army",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Byzantine",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Direction",
+                        "lexical token": "East",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Path",
+                                "token": "East",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Military",
+                        "lexical token": "army",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Force",
+                                "token": "force",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Domain",
+                                "token": "religious",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "from the East",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "new potent",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Force",
+                                "token": "army",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Possessor",
+                                "token": "Byzantine",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Becoming_a_member",
+                        "lexical token": "enlisted",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Group",
+                                "token": "the Byzantine army",
+                                "span": [
+                                    21,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "forcefully",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "New_member",
+                                "token": "the men of the islands",
+                                "span": [
+                                    26,
+                                    30
+                                ]
+                            },
+                            {
+                                "frame element": "Re-encoding",
+                                "token": "In an attempt to counter a threat from the Saracen Muslims , a new potent religious force from the East",
+                                "span": [
+                                    0,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "men",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "men",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "of the islands",
+                                "span": [
+                                    28,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "islands",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "islands",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Thwarting",
+                        "lexical token": "counter",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Action",
+                                "token": "a threat from the Saracen Muslims , a new potent religious force from the East",
+                                "span": [
+                                    5,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Preventing_cause",
+                                "token": "the Byzantine army forcefully enlisted the men of the islands",
+                                "span": [
+                                    21,
+                                    30
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"You 'll also be approached by pedicab drivers ; these are tricycles carrying two passengers .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "You 'll also be approached by pedicab drivers ; these are tricycles carrying two passengers .",
+                "frame annotations": [
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "tricycles",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "tricycles",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "two",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Number",
+                                "token": "two",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "passengers",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "approached",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "by pedicab drivers",
+                                "span": [
+                                    5,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "You",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Bringing",
+                        "lexical token": "carrying",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "two passengers",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Carrier",
+                                "token": "tricycles",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"To the north and west are the ancient sites of Ireland : Malahide Castle , the evocative hill of Tara , and the long barrows of Knowth and Newgrange .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "To the north and west are the ancient sites of Ireland : Malahide Castle , the evocative hill of Tara , and the long barrows of Knowth and Newgrange .",
+                "frame annotations": [
+                    {
+                        "frame name": "Part_orientational",
+                        "lexical token": "north",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "north",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "west",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_orientational",
+                        "lexical token": "west",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "north",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "west",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Age",
+                        "lexical token": "ancient",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Age",
+                                "token": "ancient",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "sites",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "Castle",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Malahide",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Building",
+                                "token": "Castle",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Natural_features",
+                        "lexical token": "hill",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "hill",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "of Tara",
+                                "span": [
+                                    18,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "evocative",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "sites",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "sites",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "of Ireland",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "ancient",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "To",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Direction",
+                                "token": "the north and west",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the ancient sites of Ireland",
+                                "span": [
+                                    6,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measurable_attributes",
+                        "lexical token": "long",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "barrows of Knowth and Newgrange",
+                                "span": [
+                                    24,
+                                    28
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Specifically , during the visit to the PRC , he secured a PRC agreement in the following missile - related areas : The delivery of HY-1 silkworm and HY-2 seersucker coastal defense missiles beginning in 1986 and assistance in establishing an assembly facility for these missiles .\".": {
+                "sentence": "Specifically , during the visit to the PRC , he secured a PRC agreement in the following missile - related areas : The delivery of HY-1 silkworm and HY-2 seersucker coastal defense missiles beginning in 1986 and assistance in establishing an assembly facility for these missiles .",
+                "frame annotations": [
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "visit",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to the PRC",
+                                "span": [
+                                    5,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "he",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "secured",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Recipient",
+                                "token": "he",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "a PRC agreement in the following missile - related areas : The delivery of HY-1 silkworm and HY-2 seersucker coastal defense missiles beginning in 1986 and assistance in establishing an assembly facility for these missiles",
+                                "span": [
+                                    11,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Make_agreement_on_action",
+                        "lexical token": "agreement",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Party_1",
+                                "token": "PRC",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "in the following missile - related areas : The delivery of HY-1 silkworm and HY-2 seersucker coastal defense missiles beginning in 1986 and assistance in establishing an assembly facility for these missiles",
+                                "span": [
+                                    14,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "coastal defense",
+                                "span": [
+                                    30,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Name",
+                                "token": "HY-2 seersucker",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cognitive_connection",
+                        "lexical token": "related",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Concept_2",
+                                "token": "missile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Concept_1",
+                                "token": "areas",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Delivery",
+                        "lexical token": "delivery",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "of HY-1 silkworm and HY-2 seersucker coastal defense missiles",
+                                "span": [
+                                    24,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "beginning in 1986",
+                                "span": [
+                                    33,
+                                    35
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missiles",
+                        "span": [
+                            32,
+                            32
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "coastal defense",
+                                "span": [
+                                    30,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Name",
+                                "token": "HY-2 seersucker",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "assistance",
+                        "span": [
+                            37,
+                            37
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "in establishing an assembly facility for these missiles",
+                                "span": [
+                                    38,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_create",
+                        "lexical token": "establishing",
+                        "span": [
+                            39,
+                            39
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Created_entity",
+                                "token": "an assembly facility for these missiles",
+                                "span": [
+                                    40,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facility",
+                        "span": [
+                            42,
+                            42
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Use",
+                                "token": "assembly",
+                                "span": [
+                                    41,
+                                    41
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "facility",
+                                "span": [
+                                    42,
+                                    42
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "for these missiles",
+                                "span": [
+                                    43,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missiles",
+                        "span": [
+                            45,
+                            45
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    32,
+                                    32
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "coastal defense",
+                                "span": [
+                                    30,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Name",
+                                "token": "HY-2 seersucker",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missiles",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Process_start",
+                        "lexical token": "beginning",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "in 1986",
+                                "span": [
+                                    34,
+                                    35
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "The delivery of HY-1 silkworm and HY-2 seersucker coastal defense missiles",
+                                "span": [
+                                    22,
+                                    32
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"For four years Jewish zealots fought against the might of Rome .\".": {
+                "sentence": "For four years Jewish zealots fought against the might of Rome .",
+                "frame annotations": [
+                    {
+                        "frame name": "Hostile_encounter",
+                        "lexical token": "fought",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duration",
+                                "token": "For four years",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Side_1",
+                                "token": "Jewish zealots",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Side_2",
+                                "token": "against the might of Rome",
+                                "span": [
+                                    6,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "years",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Count",
+                                "token": "four",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "years",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Taking_sides",
+                        "lexical token": "against",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Side",
+                                "token": "the might of Rome",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Action",
+                                "token": "fought",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"There are a lot of barriers that keep people from working : physical and mental disabilities , history of welfare dependency and lack of education or self-esteem .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "There are a lot of barriers that keep people from working : physical and mental disabilities , history of welfare dependency and lack of education or self-esteem .",
+                "frame annotations": [
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "There",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "a lot of barriers that keep people from working : physical and mental disabilities , history of welfare dependency and lack of education or self-esteem",
+                                "span": [
+                                    2,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "are",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "a lot of barriers that keep people from working : physical and mental disabilities , history of welfare dependency and lack of education or self-esteem",
+                                "span": [
+                                    2,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "a",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "a lot",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "of barriers that keep people from working",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "lot",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "a lot",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "of barriers that keep people from working",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "people",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "people",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "working",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Individual_history",
+                        "lexical token": "history",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Events",
+                                "token": "of welfare dependency",
+                                "span": [
+                                    18,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Reliance",
+                        "lexical token": "dependency",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Means",
+                                "token": "welfare",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "lack",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possession",
+                                "token": "of education or self-esteem",
+                                "span": [
+                                    23,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "education",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Yet another delivery option would be to equip Libya 's Su-24D `` Fencer '' advanced fighter aircraft with chemical bombs .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Yet another delivery option would be to equip Libya 's Su-24D `` Fencer '' advanced fighter aircraft with chemical bombs .",
+                "frame annotations": [
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "equip",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Recipient",
+                                "token": "Libya 's Su-24D `` Fencer '' advanced fighter aircraft",
+                                "span": [
+                                    8,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "with chemical bombs",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Stage_of_progress",
+                        "lexical token": "advanced",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "fighter aircraft",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "bombs",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "bombs",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "chemical",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"As with the other two plants , the Libyan government has claimed at various times that Tarhunah is a petrochemical complex or that the facility 's tunnels are part of the Great Man-Made River Project to funnel water from Libya 's southern acquifers to its coastal cities .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "As with the other two plants , the Libyan government has claimed at various times that Tarhunah is a petrochemical complex or that the facility 's tunnels are part of the Great Man-Made River Project to funnel water from Libya 's southern acquifers to its coastal cities .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "claimed",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "the Libyan government",
+                                "span": [
+                                    7,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "at various times",
+                                "span": [
+                                    12,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that Tarhunah is a petrochemical complex or that the facility 's tunnels are part of the Great Man-Made River Project to funnel water from Libya 's southern acquifers to its coastal cities",
+                                "span": [
+                                    15,
+                                    46
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "complex",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "Tarhunah",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "petrochemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "facility",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "cities",
+                                "span": [
+                                    46,
+                                    46
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "coastal",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    44,
+                                    44
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facility",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "Tarhunah",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "petrochemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "facility",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "cities",
+                                "span": [
+                                    46,
+                                    46
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "coastal",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    44,
+                                    44
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_whole",
+                        "lexical token": "part",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "of the Great Man-Made River Project to funnel water from Libya 's southern acquifers to its coastal cities",
+                                "span": [
+                                    29,
+                                    46
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "the facility 's tunnels",
+                                "span": [
+                                    23,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "cities",
+                        "span": [
+                            46,
+                            46
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "Tarhunah",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "petrochemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "facility",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "cities",
+                                "span": [
+                                    46,
+                                    46
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "coastal",
+                                "span": [
+                                    45,
+                                    45
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    44,
+                                    44
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_orientational",
+                        "lexical token": "southern",
+                        "span": [
+                            41,
+                            41
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "acquifers",
+                                "span": [
+                                    42,
+                                    42
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "Libya 's",
+                                "span": [
+                                    39,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "Project",
+                        "span": [
+                            34,
+                            34
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Great Man-Made River",
+                                "span": [
+                                    31,
+                                    33
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to funnel water from Libya 's southern acquifers to its coastal cities",
+                                "span": [
+                                    35,
+                                    46
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Roadways",
+                        "lexical token": "tunnels",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Roadway",
+                                "token": "tunnels",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "the facility 's",
+                                "span": [
+                                    23,
+                                    25
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Each brigade is believed to have an operational test and evaluation responsibility for its respective missile systems .\".": {
+                "sentence": "Each brigade is believed to have an operational test and evaluation responsibility for its respective missile systems .",
+                "frame annotations": [
+                    {
+                        "frame name": "Awareness",
+                        "lexical token": "believed",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Content",
+                                "token": "Each brigade",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Content",
+                                "token": "to have an operational test and evaluation responsibility for its respective missile systems",
+                                "span": [
+                                    4,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Operational_testing",
+                        "lexical token": "test",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Desired_state_of_affairs",
+                                "token": "operational",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Product",
+                                "token": "for its respective missile systems",
+                                "span": [
+                                    12,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_obligated",
+                        "lexical token": "responsibility",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duty",
+                                "token": "evaluation",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Duty",
+                                "token": "for its respective missile systems",
+                                "span": [
+                                    12,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Gizmo",
+                        "lexical token": "systems",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Use",
+                                "token": "missile",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assessing",
+                        "lexical token": "evaluation",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Feature",
+                                "token": "operational",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"In 1904 , the narrow , double-decker trams ran along the waterfront , but land reclamation has placed them far inland .\".": {
+                "sentence": "In 1904 , the narrow , double-decker trams ran along the waterfront , but land reclamation has placed them far inland .",
+                "frame annotations": [
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "In",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_period",
+                                "token": "1904",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "the narrow , double-decker trams ran along the waterfront",
+                                "span": [
+                                    3,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measurable_attributes",
+                        "lexical token": "narrow",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "double-decker trams",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "trams",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "trams",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "narrow , double-decker",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Self_motion",
+                        "lexical token": "ran",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "In 1904",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Self_mover",
+                                "token": "the narrow , double-decker trams",
+                                "span": [
+                                    3,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Path",
+                                "token": "along the waterfront",
+                                "span": [
+                                    9,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "along",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "the waterfront",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the narrow , double-decker trams ran",
+                                "span": [
+                                    3,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "them",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "inland",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "far",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Degree",
+                        "lexical token": "far",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Gradable_attribute",
+                                "token": "inland",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "inland",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "the waterfront",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the narrow , double-decker trams ran",
+                                "span": [
+                                    3,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "them",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "inland",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Distance",
+                                "token": "far",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Placing",
+                        "lexical token": "placed",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "them",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "far inland",
+                                "span": [
+                                    19,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Cause",
+                                "token": "land reclamation",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

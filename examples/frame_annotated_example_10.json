@@ -1,0 +1,1676 @@
+{
+    "Rules to annotate a sentence based on framenet": "Take on the role of a FrameNet annotation expert. Given a sentence, annotate it in accordance with FrameNet guidelines and output the result as a JSON object that complies with the provided JSON schema.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"He also sold the XYZ-11 , the key part necessary for the trigger .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "He also sold the XYZ-11 , the key part necessary for the trigger .",
+                "frame annotations": [
+                    {
+                        "frame name": "Commerce_sell",
+                        "lexical token": "sold",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goods",
+                                "token": "the XYZ-11 , the key part necessary for the trigger",
+                                "span": [
+                                    3,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Seller",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Importance",
+                        "lexical token": "key",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Factor",
+                                "token": "part",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_whole",
+                        "lexical token": "part",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "the XYZ-11",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Part_prop",
+                                "token": "key",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_necessary",
+                        "lexical token": "necessary",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Dependent",
+                                "token": "for the trigger",
+                                "span": [
+                                    10,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Required_entity",
+                                "token": "the key part",
+                                "span": [
+                                    6,
+                                    8
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"As mapped , the track traveled directly through Helen Stewart 's Las Vegas Ranch .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "As mapped , the track traveled directly through Helen Stewart 's Las Vegas Ranch .",
+                "frame annotations": [
+                    {
+                        "frame name": "Roadways",
+                        "lexical token": "track",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Roadway",
+                                "token": "track",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Travel",
+                        "lexical token": "traveled",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Traveler",
+                                "token": "the track",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Area",
+                                "token": "directly through Helen Stewart 's Las Vegas Ranch",
+                                "span": [
+                                    6,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "Ranch",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "Ranch",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "Las Vegas",
+                                "span": [
+                                    11,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Reduction in beds puts city [ Sydney ] at risk : hospital official\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Reduction in beds puts city [ Sydney ] at risk : hospital official",
+                "frame annotations": [
+                    {
+                        "frame name": "Cause_change_of_position_on_a_scale",
+                        "lexical token": "Reduction",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "in beds",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "city",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "Sydney",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Run_risk",
+                        "lexical token": "risk",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Asset",
+                                "token": "city [ Sydney ]",
+                                "span": [
+                                    4,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "hospital",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "hospital",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Causation",
+                        "lexical token": "puts",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "Reduction in beds",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Effect",
+                                "token": "city [ Sydney ]",
+                                "span": [
+                                    4,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Effect",
+                                "token": "at risk",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "city",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "official",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "official",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Governed",
+                                "token": "hospital",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"The lookout point at Lok Ma Chau was once known as Hong Kong 's `` window on China `` - in the years of China 's isolation from the West , tourists would come to the lookout point here and rent binoculars in order to get a glimpse of the great mystery beyond .\".": {
+                "sentence": "The lookout point at Lok Ma Chau was once known as Hong Kong 's `` window on China `` - in the years of China 's isolation from the West , tourists would come to the lookout point here and rent binoculars in order to get a glimpse of the great mystery beyond .",
+                "frame annotations": [
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "point",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Inherent_purpose",
+                                "token": "lookout",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "point",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "at Lok Ma Chau",
+                                "span": [
+                                    3,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "point",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Inherent_purpose",
+                                "token": "lookout",
+                                "span": [
+                                    36,
+                                    36
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "at",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "Lok Ma Chau",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "The lookout point",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "tourists would come to the lookout point",
+                                "span": [
+                                    31,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "here",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Event_instance",
+                        "lexical token": "once",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "The lookout point at Lok Ma Chau was",
+                                "span": [
+                                    0,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "known as Hong Kong 's `` window on China",
+                                "span": [
+                                    9,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_named",
+                        "lexical token": "known",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "as Hong Kong 's `` window on China",
+                                "span": [
+                                    10,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "The lookout point at Lok Ma Chau",
+                                "span": [
+                                    0,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Connecting_architecture",
+                        "lexical token": "window",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Whole",
+                                "token": "Hong Kong 's",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "window",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Connected_locations",
+                                "token": "on China",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "in",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_period",
+                                "token": "the years of China 's isolation from the West",
+                                "span": [
+                                    21,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "tourists would come to the lookout point here and rent binoculars in order to get a glimpse of the great mystery beyond",
+                                "span": [
+                                    31,
+                                    52
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "years",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_event",
+                                "token": "of China 's isolation from the West",
+                                "span": [
+                                    23,
+                                    29
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "years",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Touring",
+                        "lexical token": "tourists",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Tourist",
+                                "token": "tourists",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "come",
+                        "span": [
+                            33,
+                            33
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "tourists",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to the lookout point",
+                                "span": [
+                                    34,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "here",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "point",
+                        "span": [
+                            37,
+                            37
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Inherent_purpose",
+                                "token": "lookout",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "point",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Relative_location",
+                                "token": "at Lok Ma Chau",
+                                "span": [
+                                    3,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "point",
+                                "span": [
+                                    37,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Inherent_purpose",
+                                "token": "lookout",
+                                "span": [
+                                    36,
+                                    36
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "here",
+                        "span": [
+                            38,
+                            38
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "Lok Ma Chau",
+                                "span": [
+                                    4,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "The lookout point",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "tourists would come to the lookout point",
+                                "span": [
+                                    31,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "here",
+                                "span": [
+                                    38,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Renting",
+                        "lexical token": "rent",
+                        "span": [
+                            40,
+                            40
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Lessee",
+                                "token": "tourists",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Goods",
+                                "token": "binoculars",
+                                "span": [
+                                    41,
+                                    41
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "in order to get a glimpse of the great mystery beyond",
+                                "span": [
+                                    42,
+                                    52
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "in",
+                        "span": [
+                            42,
+                            42
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to get a glimpse of the great mystery beyond",
+                                "span": [
+                                    44,
+                                    52
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "rent binoculars",
+                                "span": [
+                                    40,
+                                    41
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "tourists",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "order",
+                        "span": [
+                            43,
+                            43
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to get a glimpse of the great mystery beyond",
+                                "span": [
+                                    44,
+                                    52
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "rent binoculars",
+                                "span": [
+                                    40,
+                                    41
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "tourists",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Punctual_perception",
+                        "lexical token": "glimpse",
+                        "span": [
+                            47,
+                            47
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "of the great mystery beyond",
+                                "span": [
+                                    48,
+                                    52
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"In 2003 , US experts were given access to Libya 's missile arsenal and to a number of missile research facilities . \".": {
+                "sentence": "In 2003 , US experts were given access to Libya 's missile arsenal and to a number of missile research facilities . ",
+                "frame annotations": [
+                    {
+                        "frame name": "Expertise",
+                        "lexical token": "experts",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Protagonist",
+                                "token": "US experts",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Giving",
+                        "lexical token": "given",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Recipient",
+                                "token": "US experts",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In 2003",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "access to Libya 's missile arsenal and to a number of missile research facilities",
+                                "span": [
+                                    7,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "arsenal",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Wielder",
+                                "token": "Libya 's",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Wielder",
+                                "token": "Libya 's",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "number",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Individuals",
+                                "token": "of missile research facilities",
+                                "span": [
+                                    17,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Quantity",
+                                "token": "number",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Wielder",
+                                "token": "Libya 's",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "arsenal",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "missile",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Research",
+                        "lexical token": "research",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "missile",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facilities",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "facilities",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "missile research",
+                                "span": [
+                                    18,
+                                    19
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"On the way the plane stopped in Rome , where John was arrested .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "On the way the plane stopped in Rome , where John was arrested .",
+                "frame annotations": [
+                    {
+                        "frame name": "Vehicle",
+                        "lexical token": "plane",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Vehicle",
+                                "token": "plane",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Halt",
+                        "lexical token": "stopped",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Depictive",
+                                "token": "On the way",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "in Rome , where John was arrested",
+                                "span": [
+                                    6,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "the plane",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Arrest",
+                        "lexical token": "arrested",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Suspect",
+                                "token": "John",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Warhol 's collections included airplane menus , unpaid invoices , pizza dough , pornographic pulp novels , newspapers , stamps , supermarket flyers , and cookie jars , among other eccentricities .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Warhol 's collections included airplane menus , unpaid invoices , pizza dough , pornographic pulp novels , newspapers , stamps , supermarket flyers , and cookie jars , among other eccentricities .",
+                "frame annotations": [
+                    {
+                        "frame name": "Billing",
+                        "lexical token": "invoices",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Payment_status",
+                                "token": "unpaid",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Although Pyongyang acceded to the Biological and Toxin Weapons Convention ( BWC ) in 1970s , North Korea is suspected of having a biological weapon ( BW ) program . \" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Although Pyongyang acceded to the Biological and Toxin Weapons Convention ( BWC ) in 1970s , North Korea is suspected of having a biological weapon ( BW ) program . ",
+                "frame annotations": [
+                    {
+                        "frame name": "Suspicion",
+                        "lexical token": "suspected",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Suspect",
+                                "token": "North Korea",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Incident",
+                                "token": "of having a biological weapon ( BW ) program",
+                                "span": [
+                                    20,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "biological",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapon",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapon",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapon",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "biological weapon ( BW )",
+                                "span": [
+                                    23,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "North Korea",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sign_agreement",
+                        "lexical token": "acceded",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Signatory",
+                                "token": "Pyongyang",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Agreement",
+                                "token": "to the Biological and Toxin Weapons Convention ( BWC )",
+                                "span": [
+                                    3,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "in 1970s",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"It is likely that a third brigade equipped with the Shehab-3 will be formed by 2005 .\".": {
+                "sentence": "It is likely that a third brigade equipped with the Shehab-3 will be formed by 2005 .",
+                "frame annotations": [
+                    {
+                        "frame name": "Likelihood",
+                        "lexical token": "likely",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "that a third brigade equipped with the Shehab-3 will be formed by 2005",
+                                "span": [
+                                    3,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Creating",
+                        "lexical token": "formed",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Created_entity",
+                                "token": "a third brigade equipped with the Shehab-3",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "by 2005",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ordinal_numbers",
+                        "lexical token": "third",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "brigade equipped with the Shehab-3",
+                                "span": [
+                                    6,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "a third brigade equipped with the Shehab-3",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"While the Agreed Framework froze North Korea 's plutonium program for almost a decade , neither party was completely satisfied with either the compromise reached or its implementation .\".": {
+                "sentence": "While the Agreed Framework froze North Korea 's plutonium program for almost a decade , neither party was completely satisfied with either the compromise reached or its implementation .",
+                "frame annotations": [
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "plutonium",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "plutonium",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "plutonium",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "North Korea 's",
+                                "span": [
+                                    5,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Experiencer_focus",
+                        "lexical token": "satisfied",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Experiencer",
+                                "token": "neither party",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "completely",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Content",
+                                "token": "with either the compromise reached or its implementation",
+                                "span": [
+                                    20,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Activity_pause",
+                        "lexical token": "froze",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "the Agreed Framework",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "North Korea 's plutonium program",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Duration",
+                                "token": "for almost a decade",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "decade",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "decade",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Execute_plan",
+                        "lexical token": "implementation",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Plan",
+                                "token": "its",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "party",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "party",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

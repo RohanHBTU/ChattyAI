@@ -1,0 +1,1317 @@
+{
+    "Rules to annotate a sentence based on framenet": "You have expertise in FrameNet and are required to annotate sentences according to its guidelines. Output the annotations in a JSON format that aligns with the specific schema provided in the prompt or context.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"Politically , China has sought to establish and improve its relationship with Iran since the 1980s .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Politically , China has sought to establish and improve its relationship with Iran since the 1980s .",
+                "frame annotations": [
+                    {
+                        "frame name": "Intentionally_create",
+                        "lexical token": "establish",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Creator",
+                                "token": "China",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Created_entity",
+                                "token": "its relationship with Iran",
+                                "span": [
+                                    9,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"thats fine - we ca n't pay them anyway\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "thats fine - we ca n't pay them anyway",
+                "frame annotations": [
+                    {
+                        "frame name": "Desirability",
+                        "lexical token": "fine",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "thats",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Commerce_pay",
+                        "lexical token": "pay",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Buyer",
+                                "token": "we",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Seller",
+                                "token": "them",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "ca",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "we",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "pay them",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Although since the late 1990s , DPRK technology and assistance have been declining as Russian has been increasing .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Although since the late 1990s , DPRK technology and assistance have been declining as Russian has been increasing .",
+                "frame annotations": [
+                    {
+                        "frame name": "Artifact",
+                        "lexical token": "technology",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Artifact",
+                                "token": "technology",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Creator",
+                                "token": "DPRK",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "assistance",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Helper",
+                                "token": "DPRK",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Change_position_on_a_scale",
+                        "lexical token": "declining",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "DPRK technology and assistance",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "since the late 1990s",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Correlated_variable",
+                                "token": "as Russian has been increasing",
+                                "span": [
+                                    13,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "Russian",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "since the late 1990s",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Change_position_on_a_scale",
+                        "lexical token": "increasing",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "DPRK technology and assistance",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "since the late 1990s",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Correlated_variable",
+                                "token": "as Russian has been increasing",
+                                "span": [
+                                    13,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "Russian",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "since the late 1990s",
+                                "span": [
+                                    1,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"He had made his name as the most lewd and bloodthirsty tyrant that had ever governed any country with a pretence to civilization .\".": {
+                "sentence": "He had made his name as the most lewd and bloodthirsty tyrant that had ever governed any country with a pretence to civilization .",
+                "frame annotations": [
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "country",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "country",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "with a pretence to civilization .",
+                                "span": [
+                                    18,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "governed",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "that",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Governed",
+                                "token": "any country with a pretence to civilization",
+                                "span": [
+                                    16,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "the most lewd and bloodthirsty tyrant",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Role",
+                                "token": "tyrant",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "most lewd and bloodthirsty",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "tyrant",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "that",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Governed",
+                                "token": "any country with a pretence to civilization",
+                                "span": [
+                                    16,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "the most lewd and bloodthirsty tyrant",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Role",
+                                "token": "tyrant",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "most lewd and bloodthirsty",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Carter announced from Pyongyang that Kim had accepted the broad outline of a deal that was later finalized as the `` Agreed Framework '' in October 1994 .\".": {
+                "sentence": "Carter announced from Pyongyang that Kim had accepted the broad outline of a deal that was later finalized as the `` Agreed Framework '' in October 1994 .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "announced",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Carter",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "from Pyongyang",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that Kim had accepted the broad outline of a deal that was later finalized as the `` Agreed Framework '' in October 1994",
+                                "span": [
+                                    4,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Be_in_agreement_on_action",
+                        "lexical token": "deal",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Respond_to_proposal",
+                        "lexical token": "accepted",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Kim",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Proposal",
+                                "token": "the broad outline of a deal that was later finalized as the `` Agreed Framework '' in October 1994",
+                                "span": [
+                                    8,
+                                    26
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"The highway and the railway stay close together from Fanling , site of the best golf courses in the area .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "The highway and the railway stay close together from Fanling , site of the best golf courses in the area .",
+                "frame annotations": [
+                    {
+                        "frame name": "Roadways",
+                        "lexical token": "highway",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Roadway",
+                                "token": "highway",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Roadway",
+                                "token": "railway",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Roadways",
+                        "lexical token": "railway",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Roadway",
+                                "token": "highway",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Roadway",
+                                "token": "railway",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "State_continue",
+                        "lexical token": "stay",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "The highway and the railway",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "State",
+                                "token": "close together",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "from Fanling",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "site",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "site",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Desirability",
+                        "lexical token": "best",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "golf courses",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Comparison_set",
+                                "token": "in the area",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "the area",
+                                "span": [
+                                    18,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the best golf courses",
+                                "span": [
+                                    13,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "area",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "site",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"In public places .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "In public places .",
+                "frame annotations": [
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "In",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "public places",
+                                "span": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "places",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "places",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "public",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Secrecy_status",
+                        "lexical token": "public",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "places",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"The screening methods are nearly useless for screening trash , however , due to the density and lack of uniform content of trash shipments .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "The screening methods are nearly useless for screening trash , however , due to the density and lack of uniform content of trash shipments .",
+                "frame annotations": [
+                    {
+                        "frame name": "Sending",
+                        "lexical token": "shipments",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "trash",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"From that moment he had vanished from the world , and his identity had been a frequent subject for comment in the European press .\".": {
+                "sentence": "From that moment he had vanished from the world , and his identity had been a frequent subject for comment in the European press .",
+                "frame annotations": [
+                    {
+                        "frame name": "Frequency",
+                        "lexical token": "frequent",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "subject for comment",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Topic",
+                        "lexical token": "subject",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "his identity",
+                                "span": [
+                                    11,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "in the European press .",
+                                "span": [
+                                    20,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Status",
+                                "token": "for comment",
+                                "span": [
+                                    18,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Departing",
+                        "lexical token": "vanished",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "he",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from the world ,",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "comment",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "a frequent subject",
+                                "span": [
+                                    15,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Medium",
+                                "token": "in the European press .",
+                                "span": [
+                                    20,
+                                    24
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"In the short while since Goodwill helped him find his job , Robert has learned to thoroughly clean a motel room in about 40 minutes .\".": {
+                "sentence": "In the short while since Goodwill helped him find his job , Robert has learned to thoroughly clean a motel room in about 40 minutes .",
+                "frame annotations": [
+                    {
+                        "frame name": "Duration_description",
+                        "lexical token": "short",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Period",
+                                "token": "while",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Time_vector",
+                        "lexical token": "since",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Distance",
+                                "token": "the short while",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Direction",
+                                "token": "since",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Landmark_event",
+                                "token": "Goodwill helped him find his job",
+                                "span": [
+                                    5,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "helped",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Helper",
+                                "token": "Goodwill",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Benefited_party",
+                                "token": "him",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "find his job",
+                                "span": [
+                                    8,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "job",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Employee",
+                                "token": "his",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "learned",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Student",
+                                "token": "Robert",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Skill",
+                                "token": "to thoroughly clean a motel room in about 40 minutes",
+                                "span": [
+                                    15,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "motel",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "motel",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Building_subparts",
+                        "lexical token": "room",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building_part",
+                                "token": "room",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "motel",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Taking_time",
+                        "lexical token": "in",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time_length",
+                                "token": "about 40 minutes",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "to thoroughly clean a motel room",
+                                "span": [
+                                    15,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Robert",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Time_length",
+                                "token": "the short while since Goodwill helped him find his job",
+                                "span": [
+                                    1,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "Robert has learned to thoroughly clean a motel room in about 40 minutes",
+                                "span": [
+                                    12,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "40",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "minutes",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Number",
+                                "token": "40",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "minutes",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "minutes",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Count",
+                                "token": "40",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Taking_time",
+                        "lexical token": "In",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time_length",
+                                "token": "about 40 minutes",
+                                "span": [
+                                    22,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "to thoroughly clean a motel room",
+                                "span": [
+                                    15,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Robert",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Time_length",
+                                "token": "the short while since Goodwill helped him find his job",
+                                "span": [
+                                    1,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "Robert has learned to thoroughly clean a motel room in about 40 minutes",
+                                "span": [
+                                    12,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Proportional_quantity",
+                        "lexical token": "about",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Individuals",
+                                "token": "minutes",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Reference_quantity",
+                                "token": "40",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Denoted_quantity",
+                                "token": "about",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

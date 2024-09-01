@@ -1,0 +1,1424 @@
+{
+    "Rules to annotate a sentence based on framenet": "You are tasked with performing FrameNet annotations for sentence given by the user in prompt. Ensure that your annotations follow FrameNet standards and are output in a JSON format that matches the schema specified in the prompt.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"As someone has said , Columbus only thought that he had discovered Jamaica .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "As someone has said , Columbus only thought that he had discovered Jamaica .",
+                "frame annotations": [
+                    {
+                        "frame name": "Communication",
+                        "lexical token": "said",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Communicator",
+                                "token": "someone",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "Columbus only thought that he had discovered Jamaica",
+                                "span": [
+                                    5,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Opinion",
+                        "lexical token": "thought",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "Columbus",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Opinion",
+                                "token": "that he had discovered Jamaica",
+                                "span": [
+                                    8,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Achieving_first",
+                        "lexical token": "discovered",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "he",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "New_idea",
+                                "token": "Jamaica",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"It was one of those pictures which are so contrived that the eyes follow you about when you move .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "It was one of those pictures which are so contrived that the eyes follow you about when you move .",
+                "frame annotations": [
+                    {
+                        "frame name": "Physical_artworks",
+                        "lexical token": "pictures",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Artifact",
+                                "token": "pictures",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Coming_up_with",
+                        "lexical token": "contrived",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Idea",
+                                "token": "which",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Idea",
+                                "token": "pictures",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Result",
+                                "token": "so",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Result",
+                                "token": "that the eyes follow you about when you move",
+                                "span": [
+                                    10,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "eyes",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Body_part",
+                                "token": "eyes",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cotheme",
+                        "lexical token": "follow",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "the eyes",
+                                "span": [
+                                    11,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Cotheme",
+                                "token": "you",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Area",
+                                "token": "about",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "when you move",
+                                "span": [
+                                    16,
+                                    18
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"I have heard that he was atrocious .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "I have heard that he was atrocious .",
+                "frame annotations": [
+                    {
+                        "frame name": "Hearsay",
+                        "lexical token": "heard",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Message",
+                                "token": "that he was atrocious .",
+                                "span": [
+                                    3,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Hearer",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Social_interaction_evaluation",
+                        "lexical token": "atrocious",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "he",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"An unexpected piece of historical memorabilia turns up in the monastery garden , where guides point out a small stone table used for a treaty - signing ceremony in 1844 .\".": {
+                "sentence": "An unexpected piece of historical memorabilia turns up in the monastery garden , where guides point out a small stone table used for a treaty - signing ceremony in 1844 .",
+                "frame annotations": [
+                    {
+                        "frame name": "Expectation",
+                        "lexical token": "unexpected",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "piece of historical memorabilia",
+                                "span": [
+                                    2,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_piece",
+                        "lexical token": "piece",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Piece",
+                                "token": "piece",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "of historical memorabilia",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "monastery",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "monastery",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "garden",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "garden",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Size",
+                        "lexical token": "small",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "stone table",
+                                "span": [
+                                    19,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Using",
+                        "lexical token": "used",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "a small stone table",
+                                "span": [
+                                    17,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "for a treaty - signing ceremony",
+                                "span": [
+                                    22,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "in 1844",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Documents",
+                        "lexical token": "treaty",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Document",
+                                "token": "treaty",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sign_agreement",
+                        "lexical token": "signing",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agreement",
+                                "token": "treaty",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"The names of the injured firefighters are not known .\".": {
+                "sentence": "The names of the injured firefighters are not known .",
+                "frame annotations": [
+                    {
+                        "frame name": "Being_named",
+                        "lexical token": "names",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "names",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "of the injured firefighters",
+                                "span": [
+                                    2,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People_by_vocation",
+                        "lexical token": "firefighters",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "firefighters",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Awareness_status",
+                        "lexical token": "known",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Content",
+                                "token": "The names of the injured firefighters",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"Iran claims that all its facilities are necessary for a peaceful and self - sufficient nuclear program .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Iran claims that all its facilities are necessary for a peaceful and self - sufficient nuclear program .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "claims",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "Iran",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that all its facilities are necessary for a peaceful and self - sufficient nuclear program",
+                                "span": [
+                                    2,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facilities",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "facilities",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_necessary",
+                        "lexical token": "necessary",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Requirement",
+                                "token": "all its facilities",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Dependent",
+                                "token": "for a peaceful and self - sufficient nuclear program",
+                                "span": [
+                                    8,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "nuclear",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "peaceful and self - sufficient",
+                                "span": [
+                                    10,
+                                    14
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"And Dublin , a city large in expectations , is still small enough for the visitor to see most of its sights on foot .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "And Dublin , a city large in expectations , is still small enough for the visitor to see most of its sights on foot .",
+                "frame annotations": [
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "city",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Size",
+                        "lexical token": "large",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Dimension",
+                                "token": "in expectations",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "a city",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "Dublin , a city large in expectations",
+                                "span": [
+                                    1,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "enough",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "for the visitor to see most of its sights on foot",
+                                "span": [
+                                    13,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Expectation",
+                        "lexical token": "expectations",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Continued_state_of_affairs",
+                        "lexical token": "still",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "Dublin , a city large in expectations , is",
+                                "span": [
+                                    1,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "State_of_affairs",
+                                "token": "small enough for the visitor to see most of its sights on foot",
+                                "span": [
+                                    11,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Reference_occasion",
+                                "token": "still",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Size",
+                        "lexical token": "small",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Dimension",
+                                "token": "in expectations",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "a city",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "Dublin , a city large in expectations",
+                                "span": [
+                                    1,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "enough",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "for the visitor to see most of its sights on foot",
+                                "span": [
+                                    13,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sufficiency",
+                        "lexical token": "enough",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Scale",
+                                "token": "small",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Enabled_situation",
+                                "token": "for the visitor to see most of its sights on foot",
+                                "span": [
+                                    13,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "Dublin , a city large in expectations",
+                                "span": [
+                                    1,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "foot",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Body_part",
+                                "token": "foot",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Partitive",
+                        "lexical token": "of",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subset",
+                                "token": "most",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Group",
+                                "token": "its sights",
+                                "span": [
+                                    20,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Touring",
+                        "lexical token": "sights",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attraction",
+                                "token": "sights",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "its",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Tourist",
+                                "token": "the visitor",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Attraction",
+                                "token": "most of its sights",
+                                "span": [
+                                    18,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "on foot",
+                                "span": [
+                                    22,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Touring",
+                        "lexical token": "see",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attraction",
+                                "token": "sights",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "its",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Tourist",
+                                "token": "the visitor",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Attraction",
+                                "token": "most of its sights",
+                                "span": [
+                                    18,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "on foot",
+                                "span": [
+                                    22,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Visiting",
+                        "lexical token": "visitor",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "visitor",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Jack Dustman Board Member and Former Chairman\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Jack Dustman Board Member and Former Chairman",
+                "frame annotations": [
+                    {
+                        "frame name": "Membership",
+                        "lexical token": "Member",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Group",
+                                "token": "Board",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Member",
+                                "token": "Jack Dustman",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "Chairman",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Leader",
+                                "token": "Jack Dustman",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Role",
+                                "token": "Chairman",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Today , all three facilities undertake projects requiring advanced microbiology and genetic engineering equipment and expertise that could be applied toward the production of biological weapons .\".": {
+                "sentence": "Today , all three facilities undertake projects requiring advanced microbiology and genetic engineering equipment and expertise that could be applied toward the production of biological weapons .",
+                "frame annotations": [
+                    {
+                        "frame name": "Stage_of_progress",
+                        "lexical token": "advanced",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "microbiology and genetic engineering equipment and expertise",
+                                "span": [
+                                    9,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "production",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "of biological weapons",
+                                "span": [
+                                    23,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Gizmo",
+                        "lexical token": "equipment",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Use",
+                                "token": "microbiology and genetic engineering",
+                                "span": [
+                                    9,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Expertise",
+                        "lexical token": "expertise",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Knowledge",
+                                "token": "microbiology and genetic engineering",
+                                "span": [
+                                    9,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facilities",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "facilities",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "projects",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Using",
+                        "lexical token": "applied",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "advanced microbiology and genetic engineering equipment and expertise that",
+                                "span": [
+                                    8,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "toward the production of biological weapons",
+                                "span": [
+                                    20,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attempt",
+                        "lexical token": "undertake",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "Today",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "all three facilities",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "projects requiring advanced microbiology and genetic engineering equipment and expertise that could be applied toward the production of biological weapons",
+                                "span": [
+                                    6,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "biological",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Uh , he was , uh , he - he - was a veterinarian and killed two - a father and a son - okay .\".": {
+                "sentence": "Uh , he was , uh , he - he - was a veterinarian and killed two - a father and a son - okay .",
+                "frame annotations": [
+                    {
+                        "frame name": "Killing",
+                        "lexical token": "killed",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Killer",
+                                "token": "he",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Victim",
+                                "token": "two",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "two",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Number",
+                                "token": "two",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Kinship",
+                        "lexical token": "father",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Alter",
+                                "token": "father",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Alter",
+                                "token": "son",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Kinship",
+                        "lexical token": "son",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Alter",
+                                "token": "father",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Alter",
+                                "token": "son",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

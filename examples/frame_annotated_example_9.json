@@ -1,0 +1,1918 @@
+{
+    "Rules to annotate a sentence based on framenet": "Take on the role of a FrameNet annotation expert. Given a sentence, annotate it in accordance with FrameNet guidelines and output the result as a JSON object that complies with the provided JSON schema.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"Given favorable conditions , Iran is currently on track to be able to extend its ballistic missile capabilities to include Southern Europe , North Africa , and South Asia by 2005 - 2010 and possibly the continental United States by 2015 .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Given favorable conditions , Iran is currently on track to be able to extend its ballistic missile capabilities to include Southern Europe , North Africa , and South Asia by 2005 - 2010 and possibly the continental United States by 2015 .",
+                "frame annotations": [
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "able",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Iran",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "to extend its ballistic missile capabilities to include Southern Europe , North Africa , and South Asia by 2005 - 2010 and possibly the continental United States by 2015",
+                                "span": [
+                                    12,
+                                    40
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "its",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "ballistic missile",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "capabilities",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Iran",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "to extend its ballistic missile capabilities to include Southern Europe , North Africa , and South Asia by 2005 - 2010 and possibly the continental United States by 2015",
+                                "span": [
+                                    12,
+                                    40
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "its",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "ballistic missile",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "ballistic",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Inclusion",
+                        "lexical token": "include",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "Southern Europe , North Africa , and South Asia by 2005 - 2010 and possibly the continental United States by 2015",
+                                "span": [
+                                    20,
+                                    40
+                                ]
+                            },
+                            {
+                                "frame element": "Total",
+                                "token": "its ballistic missile capabilities",
+                                "span": [
+                                    14,
+                                    17
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"I mean , what can i say ?\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "I mean , what can i say ?",
+                "frame annotations": [
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "can",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "i say",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "what",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "say",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Message",
+                                "token": "what",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Speaker",
+                                "token": "i",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"I felt the temblor begin and glanced at the table next to mine , smiled that guilty smile and we both mouthed the words , `` Earth-quake ! '' together .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "I felt the temblor begin and glanced at the table next to mine , smiled that guilty smile and we both mouthed the words , `` Earth-quake ! '' together .",
+                "frame annotations": [
+                    {
+                        "frame name": "Perception_experience",
+                        "lexical token": "felt",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Perceiver_passive",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "the temblor",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "begin",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Perception_active",
+                        "lexical token": "glanced",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Perceiver_agentive",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "at the table next to mine",
+                                "span": [
+                                    7,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Process_start",
+                        "lexical token": "begin",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "the temblor",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Making_faces",
+                        "lexical token": "smiled",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Cognate_event",
+                                "token": "that guilty smile",
+                                "span": [
+                                    15,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Contrition",
+                        "lexical token": "guilty",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Expressor",
+                                "token": "smile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Facial_expression",
+                        "lexical token": "smile",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Expression",
+                                "token": "smile",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Conveyed_emotion",
+                                "token": "guilty",
+                                "span": [
+                                    16,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Communication_manner",
+                        "lexical token": "mouthed",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "we both",
+                                "span": [
+                                    19,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "the words , `` Earth-quake",
+                                "span": [
+                                    22,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "together",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Adjacency",
+                        "lexical token": "next",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "the table",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "mine",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Adjacency",
+                        "lexical token": "to",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "the table",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "mine",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Moving_in_place",
+                        "lexical token": "temblor",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Homer wrote his epic works on Chios ; and lyrical poetry was much admired , particularly the work of the poets Archilochos on Paros and Sappho on Lesvos .\".": {
+                "sentence": "Homer wrote his epic works on Chios ; and lyrical poetry was much admired , particularly the work of the poets Archilochos on Paros and Sappho on Lesvos .",
+                "frame annotations": [
+                    {
+                        "frame name": "Text_creation",
+                        "lexical token": "wrote",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Author",
+                                "token": "Homer",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "his epic works",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "on Chios",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Text",
+                        "lexical token": "poetry",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "poetry",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Genre",
+                                "token": "lyrical",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "works",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Author",
+                                "token": "his",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "on Chios",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Judgment",
+                        "lexical token": "admired",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "lyrical poetry",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "much",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Evaluee",
+                                "token": "particularly the work of the poets Archilochos on Paros and Sappho on Lesvos",
+                                "span": [
+                                    15,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Spatial_contact",
+                        "lexical token": "on",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "Archilochos",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Paros",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Sappho",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Lesvos",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Chios",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Homer wrote his epic works",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Spatial_contact",
+                        "lexical token": "on",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "Archilochos",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Paros",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Sappho",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Lesvos",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Chios",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Homer wrote his epic works",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Spatial_contact",
+                        "lexical token": "on",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "Archilochos",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Paros",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Sappho",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Lesvos",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "Chios",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Homer wrote his epic works",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Text",
+                        "lexical token": "epic",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "poetry",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Genre",
+                                "token": "lyrical",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "works",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Author",
+                                "token": "his",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "on Chios",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Libya has shown interest in and taken steps to acquire weapons of mass destruction ( WMD ) and their delivery systems . \".": {
+                "sentence": "Libya has shown interest in and taken steps to acquire weapons of mass destruction ( WMD ) and their delivery systems . ",
+                "frame annotations": [
+                    {
+                        "frame name": "Emotion_directed",
+                        "lexical token": "interest",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Experiencer",
+                                "token": "Libya",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Stimulus",
+                                "token": "in",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Stimulus",
+                                "token": "weapons of mass destruction ( WMD ) and their delivery systems",
+                                "span": [
+                                    10,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "acquire",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Recipient",
+                                "token": "Libya",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "weapons of mass destruction ( WMD ) and their delivery systems",
+                                "span": [
+                                    10,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Intentionally_act",
+                        "lexical token": "steps",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "Libya",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "to acquire weapons of mass destruction ( WMD ) and their delivery systems",
+                                "span": [
+                                    8,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Act",
+                                "token": "steps",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons of mass destruction",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "of mass destruction",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "of",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons of mass destruction",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "of mass destruction",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "mass",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons of mass destruction",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "of mass destruction",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "destruction",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons of mass destruction",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "of mass destruction",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Gizmo",
+                        "lexical token": "systems",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Use",
+                                "token": "delivery",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Gizmo",
+                                "token": "systems",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"A 1999 report by the U.S. Congress stated the following with regard to how the North Korean military views chemical weaponry :\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "A 1999 report by the U.S. Congress stated the following with regard to how the North Korean military views chemical weaponry :",
+                "frame annotations": [
+                    {
+                        "frame name": "Text",
+                        "lexical token": "report",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "report",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Time_of_creation",
+                                "token": "1999",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Author",
+                                "token": "by the U.S. Congress",
+                                "span": [
+                                    3,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "stated",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Medium",
+                                "token": "A 1999 report by the U.S. Congress",
+                                "span": [
+                                    0,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "the following with regard to how the North Korean military views chemical weaponry",
+                                "span": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Military",
+                        "lexical token": "military",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "North Korean",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Force",
+                                "token": "military",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Categorization",
+                        "lexical token": "views",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "the North Korean military",
+                                "span": [
+                                    14,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "chemical weaponry",
+                                "span": [
+                                    19,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "chemical",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weaponry",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "chemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weaponry",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "weaponry",
+                                "span": [
+                                    20,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "chemical",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"At least 3 cats are unaccounted for , but after a search of the house , the cats were not believed to have been inside at the time the fire started .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "At least 3 cats are unaccounted for , but after a search of the house , the cats were not believed to have been inside at the time the fire started .",
+                "frame annotations": [
+                    {
+                        "frame name": "Proportional_quantity",
+                        "lexical token": "least",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_quantity",
+                                "token": "3",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "cats",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Denoted_quantity",
+                                "token": "At least 3",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Proportional_quantity",
+                        "lexical token": "At",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_quantity",
+                                "token": "3",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "cats",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Denoted_quantity",
+                                "token": "At least 3",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Relative_time",
+                        "lexical token": "after",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_occasion",
+                                "token": "a search of the house",
+                                "span": [
+                                    10,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Focal_occasion",
+                                "token": "the cats were not believed to have been inside at the time the fire started",
+                                "span": [
+                                    16,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Scrutiny",
+                        "lexical token": "search",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "of the house",
+                                "span": [
+                                    12,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "house",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "house",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Certainty",
+                        "lexical token": "believed",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Content",
+                                "token": "the cats",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Content",
+                                "token": "to have been inside at the time the fire started",
+                                "span": [
+                                    21,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "at",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_period",
+                                "token": "the time the fire started",
+                                "span": [
+                                    26,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Location_in_time",
+                        "lexical token": "time",
+                        "span": [
+                            27,
+                            27
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Focal_time",
+                                "token": "time",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Salient_event",
+                                "token": "the fire started",
+                                "span": [
+                                    28,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "fire",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "fire",
+                                "span": [
+                                    29,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Catching_fire",
+                        "lexical token": "started",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "the fire",
+                                "span": [
+                                    28,
+                                    29
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Animals",
+                        "lexical token": "cats",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Animal",
+                                "token": "cats",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Animal",
+                                "token": "cats",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Animals",
+                        "lexical token": "cats",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Animal",
+                                "token": "cats",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Animal",
+                                "token": "cats",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "inside",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "the cats",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "at the time the fire started",
+                                "span": [
+                                    25,
+                                    30
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Hong Kong and Its People\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Hong Kong and Its People",
+                "frame annotations": [
+                    {
+                        "frame name": "People",
+                        "lexical token": "People",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "People",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"This was followed two days later by an early morning attack on the Iraqi capital of Baghdad .\".": {
+                "sentence": "This was followed two days later by an early morning attack on the Iraqi capital of Baghdad .",
+                "frame annotations": [
+                    {
+                        "frame name": "Relative_time",
+                        "lexical token": "followed",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_occasion",
+                                "token": "This",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Interval",
+                                "token": "two days later",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Focal_occasion",
+                                "token": "by an early morning attack on the Iraqi capital of Baghdad",
+                                "span": [
+                                    6,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attack",
+                        "lexical token": "attack",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "early morning",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Victim",
+                                "token": "on the Iraqi capital of Baghdad",
+                                "span": [
+                                    11,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_subregion",
+                        "lexical token": "early",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subpart",
+                                "token": "early",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Time_period",
+                                "token": "morning",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Based on data supplied by the de jure nuclear weapons states , the IAEA Safeguards Division defines quantities of concern as 8kg of plutonium and 25kg of HEU .\".": {
+                "sentence": "Based on data supplied by the de jure nuclear weapons states , the IAEA Safeguards Division defines quantities of concern as 8kg of plutonium and 25kg of HEU .",
+                "frame annotations": [
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "supplied",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "data",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Supplier",
+                                "token": "by the de jure nuclear weapons states",
+                                "span": [
+                                    4,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "nuclear",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "states",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "de jure",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "nuclear weapons",
+                                "span": [
+                                    8,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "states",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Categorization",
+                        "lexical token": "defines",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Criteria",
+                                "token": "Based on data supplied by the de jure nuclear weapons states",
+                                "span": [
+                                    0,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Cognizer",
+                                "token": "the IAEA Safeguards Division",
+                                "span": [
+                                    12,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "quantities of concern",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Category",
+                                "token": "as 8kg of plutonium and 25kg of HEU",
+                                "span": [
+                                    20,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "plutonium",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Substance",
+                                "token": "plutonium",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Emotion_directed",
+                        "lexical token": "concern",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        }
+    ]
+}

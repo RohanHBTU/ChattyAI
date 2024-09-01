@@ -1,0 +1,1408 @@
+{
+    "Rules to annotate a sentence based on framenet": "You have expertise in FrameNet and are required to annotate sentences according to its guidelines. Output the annotations in a JSON format that aligns with the specific schema provided in the prompt or context.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"I know many schoolteachers and , on the whole , they are seriously committed to conscientious teaching .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "I know many schoolteachers and , on the whole , they are seriously committed to conscientious teaching .",
+                "frame annotations": [
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "schoolteachers",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Teacher",
+                                "token": "schoolteachers",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Commitment",
+                        "lexical token": "committed",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Message",
+                                "token": "to conscientious teaching",
+                                "span": [
+                                    14,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Speaker",
+                                "token": "they",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Familiarity",
+                        "lexical token": "know",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "many schoolteachers",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "many",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Mass",
+                                "token": "schoolteachers",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Quantity",
+                                "token": "many",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Importance",
+                        "lexical token": "seriously",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Interested_party",
+                                "token": "they",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Undertaking",
+                                "token": "committed to conscientious teaching",
+                                "span": [
+                                    13,
+                                    16
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"The blaze started burning last Wednesday north of Los Angeles .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "The blaze started burning last Wednesday north of Los Angeles .",
+                "frame annotations": [
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "blaze",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "blaze",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Fire",
+                                "token": "The blaze",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "Wednesday",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Relative_time",
+                                "token": "last",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "Wednesday",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "burning",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "blaze",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Fire",
+                                "token": "The blaze",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Process_start",
+                        "lexical token": "started",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "The blaze",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "burning",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "last Wednesday",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "north of Los Angeles",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"The Bible tells us that the cruelty and impiety of the rulers of both kingdoms aroused the fury of the great Prophets .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "The Bible tells us that the cruelty and impiety of the rulers of both kingdoms aroused the fury of the great Prophets .",
+                "frame annotations": [
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "rulers",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Governed",
+                                "token": "of both kingdoms",
+                                "span": [
+                                    12,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "rulers",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "kingdoms",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "kingdoms",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_to_start",
+                        "lexical token": "aroused",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "rulers of both kingdoms",
+                                "span": [
+                                    11,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Effect",
+                                "token": "the fury of the great Prophets",
+                                "span": [
+                                    16,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Telling",
+                        "lexical token": "tells",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "The Bible",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "that the cruelty and impiety of the rulers of both kingdoms aroused the fury of the great Prophets",
+                                "span": [
+                                    4,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "us",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Emotion_directed",
+                        "lexical token": "fury",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Experiencer",
+                                "token": "of the great Prophets",
+                                "span": [
+                                    18,
+                                    21
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Taiwan has been accused of making efforts to acquire a biological weapons ( BW ) capability .\".": {
+                "sentence": "Taiwan has been accused of making efforts to acquire a biological weapons ( BW ) capability .",
+                "frame annotations": [
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "acquire",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "a biological weapons ( BW ) capability",
+                                "span": [
+                                    9,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Recipient",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Judgment_communication",
+                        "lexical token": "accused",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Reason",
+                                "token": "of making efforts to acquire a biological weapons ( BW ) capability",
+                                "span": [
+                                    4,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Attempt",
+                        "lexical token": "efforts",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to acquire a biological weapons ( BW ) capability",
+                                "span": [
+                                    7,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "capability",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "biological weapons ( BW )",
+                                "span": [
+                                    10,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "Taiwan",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "biological",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "BW",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "BW",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "BW",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "biological weapons",
+                                "span": [
+                                    10,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "BW",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"It takes a long time for him to gain the self - confidence to work elsewhere in the community .\".": {
+                "sentence": "It takes a long time for him to gain the self - confidence to work elsewhere in the community .",
+                "frame annotations": [
+                    {
+                        "frame name": "Taking_time",
+                        "lexical token": "takes",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time_length",
+                                "token": "a long time",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "for him",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Activity",
+                                "token": "to gain the self - confidence to work elsewhere in the community",
+                                "span": [
+                                    7,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Duration_description",
+                        "lexical token": "long",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Period",
+                                "token": "time",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Eventuality",
+                                "token": "for him to gain the self - confidence to work elsewhere in the community",
+                                "span": [
+                                    5,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "gain",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "the self - confidence to work elsewhere in the community",
+                                "span": [
+                                    9,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Certainty",
+                        "lexical token": "confidence",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Content",
+                                "token": "to work elsewhere in the community",
+                                "span": [
+                                    13,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Being_employed",
+                        "lexical token": "work",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Place_of_employment",
+                                "token": "elsewhere in the community",
+                                "span": [
+                                    15,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locative_relation",
+                        "lexical token": "elsewhere",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "in the community",
+                                "span": [
+                                    16,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "elsewhere",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "community",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "community",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"QN : Does Pakistan have plans for a nuclear bomb ?\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "QN : Does Pakistan have plans for a nuclear bomb ?",
+                "frame annotations": [
+                    {
+                        "frame name": "Possession",
+                        "lexical token": "have",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Owner",
+                                "token": "Pakistan",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Possession",
+                                "token": "plans for a nuclear bomb",
+                                "span": [
+                                    5,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "bomb",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "bomb",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"He has no time to waste .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "He has no time to waste .",
+                "frame annotations": [
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "no",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Individuals",
+                                "token": "time",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Quantity",
+                                "token": "no",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Frugality",
+                        "lexical token": "waste",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": []
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Santa Ana winds with gusts up to 70 mph exacerbated the Montecito fire , which destroyed over 100 buildings and damaged many others , including Westmont College .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Santa Ana winds with gusts up to 70 mph exacerbated the Montecito fire , which destroyed over 100 buildings and damaged many others , including Westmont College .",
+                "frame annotations": [
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "fire",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Name",
+                                "token": "Montecito",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Fire",
+                                "token": "fire",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Destroying",
+                        "lexical token": "destroyed",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Destroyer",
+                                "token": "the Montecito fire",
+                                "span": [
+                                    10,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Destroyer",
+                                "token": "which",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "over 100 buildings",
+                                "span": [
+                                    16,
+                                    18
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Damaging",
+                        "lexical token": "damaged",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "the Montecito fire",
+                                "span": [
+                                    10,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Cause",
+                                "token": "which",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "many others , including Westmont College",
+                                "span": [
+                                    21,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Inclusion",
+                        "lexical token": "including",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Total",
+                                "token": "many others",
+                                "span": [
+                                    21,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Part",
+                                "token": "Westmont College",
+                                "span": [
+                                    25,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Proportional_quantity",
+                        "lexical token": "over",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_quantity",
+                                "token": "100",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "buildings",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Denoted_quantity",
+                                "token": "over 100",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"It may take the form of a spontaneous or induced genetic mutation , or the acquisition of resistance genes from other bacterial species by horizontal gene transfer via conjugation , transduction , or transformation .\".": {
+                "sentence": "It may take the form of a spontaneous or induced genetic mutation , or the acquisition of resistance genes from other bacterial species by horizontal gene transfer via conjugation , transduction , or transformation .",
+                "frame annotations": [
+                    {
+                        "frame name": "Getting",
+                        "lexical token": "acquisition",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "of resistance genes",
+                                "span": [
+                                    16,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from other bacterial species",
+                                "span": [
+                                    19,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "by horizontal gene transfer via conjugation , transduction , or transformation",
+                                "span": [
+                                    23,
+                                    33
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Firefighters Responsibilities : 1- Firefighting training 2- Evacuation training 3- Supervise the fire equipment in order to ensure : A : It remains in place B : Does not get damaged 4- Run some tests to identify the negatives .\".": {
+                "sentence": "Firefighters Responsibilities : 1- Firefighting training 2- Evacuation training 3- Supervise the fire equipment in order to ensure : A : It remains in place B : Does not get damaged 4- Run some tests to identify the negatives .",
+                "frame annotations": [
+                    {
+                        "frame name": "Being_obligated",
+                        "lexical token": "Responsibilities",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duty",
+                                "token": "Responsibilities",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Responsible_party",
+                                "token": "Firefighters",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "training",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subject",
+                                "token": "Firefighting",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Subject",
+                                "token": "Evacuation",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Removing",
+                        "lexical token": "Evacuation",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Education_teaching",
+                        "lexical token": "training",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Subject",
+                                "token": "Firefighting",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Subject",
+                                "token": "Evacuation",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "equipment",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "equipment",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "in",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Means",
+                                "token": "Supervise the fire equipment",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to ensure",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Purpose",
+                        "lexical token": "order",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Means",
+                                "token": "Supervise the fire equipment",
+                                "span": [
+                                    10,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "to ensure",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "State_continue",
+                        "lexical token": "remains",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "It",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "State",
+                                "token": "in place",
+                                "span": [
+                                    23,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "place",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "place",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Transition_to_state",
+                        "lexical token": "get",
+                        "span": [
+                            29,
+                            29
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Final_quality",
+                                "token": "damaged",
+                                "span": [
+                                    30,
+                                    30
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Operating_a_system",
+                        "lexical token": "Run",
+                        "span": [
+                            32,
+                            32
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "System",
+                                "token": "some tests",
+                                "span": [
+                                    33,
+                                    34
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "to identify the negatives",
+                                "span": [
+                                    35,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Categorization",
+                        "lexical token": "identify",
+                        "span": [
+                            36,
+                            36
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "the negatives",
+                                "span": [
+                                    37,
+                                    38
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Operational_testing",
+                        "lexical token": "tests",
+                        "span": [
+                            34,
+                            34
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Purpose",
+                                "token": "to identify the negatives",
+                                "span": [
+                                    35,
+                                    38
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,2435 @@
+{
+    "Rules to annotate a sentence based on framenet": "As a FrameNet specialist, annotate the given sentences following FrameNet's rules. Your annotations must be in JSON format, strictly adhering to the JSON schema included in the instructions.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"There are many package tours to Guangzhou from Hong Kong ( see page 113 ) , and this may be the easiest way to visit the city .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "There are many package tours to Guangzhou from Hong Kong ( see page 113 ) , and this may be the easiest way to visit the city .",
+                "frame annotations": [
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "many",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Individuals",
+                                "token": "package tours",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Quantity",
+                                "token": "many",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "package",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "package",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Touring",
+                        "lexical token": "tours",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Attraction",
+                                "token": "to Guangzhou",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Reference_text",
+                        "lexical token": "see",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Source_of_information",
+                                "token": "page 113",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Difficulty",
+                        "lexical token": "easiest",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "way to visit the city",
+                                "span": [
+                                    22,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Visiting",
+                        "lexical token": "visit",
+                        "span": [
+                            24,
+                            24
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "the city",
+                                "span": [
+                                    25,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "city",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    26,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Means",
+                        "lexical token": "way",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "easiest",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "to visit the city",
+                                "span": [
+                                    23,
+                                    26
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "way",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"He is not telling them to disband and regulate their weapons , so I have no faith in the ability of Abu Mazen to put terror aside .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "He is not telling them to disband and regulate their weapons , so I have no faith in the ability of Abu Mazen to put terror aside .",
+                "frame annotations": [
+                    {
+                        "frame name": "Telling",
+                        "lexical token": "telling",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "He",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Addressee",
+                                "token": "them",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "to disband",
+                                "span": [
+                                    5,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Wielder",
+                                "token": "their",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "ability",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "of Abu Mazen",
+                                "span": [
+                                    20,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "to put terror aside",
+                                "span": [
+                                    23,
+                                    26
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"I often wonder when a really great fictional book will be written about this era ( probably decades and decades hence as it is too close ) .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "I often wonder when a really great fictional book will be written about this era ( probably decades and decades hence as it is too close ) .",
+                "frame annotations": [
+                    {
+                        "frame name": "Cogitation",
+                        "lexical token": "wonder",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Topic",
+                                "token": "when a really great fictional book will be written about this era",
+                                "span": [
+                                    3,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Desirability",
+                        "lexical token": "great",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Evaluee",
+                                "token": "fictional book",
+                                "span": [
+                                    7,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Degree",
+                                "token": "really",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Text",
+                        "lexical token": "book",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "book",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Text_creation",
+                        "lexical token": "written",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "a really great fictional book",
+                                "span": [
+                                    4,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "about this era",
+                                "span": [
+                                    12,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Topic",
+                        "lexical token": "about",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Topic",
+                                "token": "this era",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Text",
+                                "token": "a really great fictional book",
+                                "span": [
+                                    4,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "decades",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "decades",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "decades",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "decades",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "decades",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Unit",
+                                "token": "decades",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Likelihood",
+                        "lexical token": "probably",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Explanation",
+                                "token": "as it is too close",
+                                "span": [
+                                    21,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "decades and decades hence",
+                                "span": [
+                                    17,
+                                    20
+                                ]
+                            },
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "a really great fictional book will be written about this era",
+                                "span": [
+                                    4,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Time_vector",
+                        "lexical token": "hence",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Distance",
+                                "token": "decades and decades",
+                                "span": [
+                                    17,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "a really great fictional book will be written about this era",
+                                "span": [
+                                    4,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Frequency",
+                        "lexical token": "often",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "I",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "wonder when a really great fictional book will be written about this era",
+                                "span": [
+                                    2,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "when",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "a really great fictional book will be written about this era",
+                                "span": [
+                                    4,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Landmark_period",
+                                "token": "when",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Calendric_unit",
+                        "lexical token": "era",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "era",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"That incredible empire dominated the world and I imagine it did not seem possible to people living then that anyone could loosen that empire 's grip on humanity .\".": {
+                "sentence": "That incredible empire dominated the world and I imagine it did not seem possible to people living then that anyone could loosen that empire 's grip on humanity .",
+                "frame annotations": [
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "empire",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "incredible",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "world",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "world",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "incredible",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "world",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Awareness",
+                        "lexical token": "imagine",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "I",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Content",
+                                "token": "it did not seem possible to people living then that anyone could loosen that empire 's grip on humanity",
+                                "span": [
+                                    9,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Give_impression",
+                        "lexical token": "seem",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Inference",
+                                "token": "it",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Inference",
+                                "token": "possible",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Perceiver_passive",
+                                "token": "to people living then",
+                                "span": [
+                                    14,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Inference",
+                                "token": "that anyone could loosen that empire 's grip on humanity",
+                                "span": [
+                                    18,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Likelihood",
+                        "lexical token": "possible",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Hypothetical_event",
+                                "token": "that anyone could loosen that empire 's grip on humanity",
+                                "span": [
+                                    18,
+                                    27
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "empire",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "incredible",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "world",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "empire",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "people",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "people",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Dominate_situation",
+                        "lexical token": "dominated",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "That incredible empire",
+                                "span": [
+                                    0,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Situation",
+                                "token": "the world",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Expertise",
+                        "lexical token": "incredible",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Protagonist",
+                                "token": "empire",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Temporal_collocation",
+                        "lexical token": "then",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Trajector_event",
+                                "token": "people living",
+                                "span": [
+                                    15,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Dead_or_alive",
+                        "lexical token": "living",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "people",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "then",
+                                "span": [
+                                    17,
+                                    17
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Possibility",
+                        "lexical token": "could",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possible_event",
+                                "token": "anyone",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Possible_event",
+                                "token": "loosen that empire 's grip on humanity",
+                                "span": [
+                                    21,
+                                    27
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Perhaps because Jerusalem was in neutral territory not allotted to any of the twelve rival tribes of Israel , David made it the capital of his newly formed kingdom and brought the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers from each of the tribes to live in his city .\".": {
+                "sentence": "Perhaps because Jerusalem was in neutral territory not allotted to any of the twelve rival tribes of Israel , David made it the capital of his newly formed kingdom and brought the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers from each of the tribes to live in his city .",
+                "frame annotations": [
+                    {
+                        "frame name": "Partiality",
+                        "lexical token": "neutral",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Decision_maker",
+                                "token": "territory",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cause_change",
+                        "lexical token": "made",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "David",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "it",
+                                "span": [
+                                    21,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Final_category",
+                                "token": "the capital of his newly formed kingdom",
+                                "span": [
+                                    22,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "kingdom",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "kingdom",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    58,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "territory",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Bringing",
+                        "lexical token": "brought",
+                        "span": [
+                            30,
+                            30
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "David",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers",
+                                "span": [
+                                    31,
+                                    48
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "from each of the tribes",
+                                "span": [
+                                    49,
+                                    53
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "to live in his city",
+                                "span": [
+                                    54,
+                                    58
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Origin",
+                        "lexical token": "from",
+                        "span": [
+                            49,
+                            49
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Origin",
+                                "token": "each of the tribes",
+                                "span": [
+                                    50,
+                                    53
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "the most formidable soldiers",
+                                "span": [
+                                    45,
+                                    48
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "the most formidable soldiers",
+                                "span": [
+                                    45,
+                                    48
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "each of the tribes",
+                                "span": [
+                                    50,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Residence",
+                        "lexical token": "live",
+                        "span": [
+                            55,
+                            55
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Location",
+                                "token": "in his city",
+                                "span": [
+                                    56,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Resident",
+                                "token": "the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers",
+                                "span": [
+                                    31,
+                                    48
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "city",
+                        "span": [
+                            58,
+                            58
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "kingdom",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    58,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "territory",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Causation",
+                        "lexical token": "because",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cause",
+                                "token": "Jerusalem was in neutral territory not allotted to any of the twelve rival tribes of Israel",
+                                "span": [
+                                    2,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Effect",
+                                "token": "David made it the capital of his newly formed kingdom",
+                                "span": [
+                                    19,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "Jerusalem",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "neutral territory not allotted to any of the twelve rival tribes of Israel",
+                                "span": [
+                                    5,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "his city",
+                                "span": [
+                                    57,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers from each of the tribes",
+                                "span": [
+                                    31,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Stimulus_focus",
+                        "lexical token": "formidable",
+                        "span": [
+                            47,
+                            47
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Stimulus",
+                                "token": "soldiers",
+                                "span": [
+                                    48,
+                                    48
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Origin",
+                        "lexical token": "from",
+                        "span": [
+                            49,
+                            49
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Origin",
+                                "token": "each of the tribes",
+                                "span": [
+                                    50,
+                                    53
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "the most formidable soldiers",
+                                "span": [
+                                    45,
+                                    48
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "the most formidable soldiers",
+                                "span": [
+                                    45,
+                                    48
+                                ]
+                            },
+                            {
+                                "frame element": "Origin",
+                                "token": "each of the tribes",
+                                "span": [
+                                    50,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            56,
+                            56
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "Jerusalem",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "neutral territory not allotted to any of the twelve rival tribes of Israel",
+                                "span": [
+                                    5,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Ground",
+                                "token": "his city",
+                                "span": [
+                                    57,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "the most talented artisans , dedicated priests , magical poets and musicians , and the most formidable soldiers from each of the tribes",
+                                "span": [
+                                    31,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "territory",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "kingdom",
+                                "span": [
+                                    28,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "city",
+                                "span": [
+                                    58,
+                                    58
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "territory",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "tribes",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "tribes",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate_property",
+                                "token": "rival",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate",
+                                "token": "tribes",
+                                "span": [
+                                    53,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Aggregate",
+                        "lexical token": "tribes",
+                        "span": [
+                            53,
+                            53
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Aggregate",
+                                "token": "tribes",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate_property",
+                                "token": "rival",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Aggregate",
+                                "token": "tribes",
+                                "span": [
+                                    53,
+                                    53
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Member_of_military",
+                        "lexical token": "soldiers",
+                        "span": [
+                            48,
+                            48
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "most formidable",
+                                "span": [
+                                    46,
+                                    47
+                                ]
+                            },
+                            {
+                                "frame element": "Person",
+                                "token": "soldiers",
+                                "span": [
+                                    48,
+                                    48
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"Chemical warfare ( CW ) agents are non-living , manufactured chemicals that are highly toxic and can enter the body through the lungs or the skin .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "Chemical warfare ( CW ) agents are non-living , manufactured chemicals that are highly toxic and can enter the body through the lungs or the skin .",
+                "frame annotations": [
+                    {
+                        "frame name": "Hostile_encounter",
+                        "lexical token": "warfare",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "Chemical",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Active_substance",
+                        "lexical token": "agents",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "Chemical warfare ( CW )",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Substance",
+                        "lexical token": "chemicals",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "non-living",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "manufactured",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Substance",
+                                "token": "chemicals",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Toxic_substance",
+                        "lexical token": "toxic",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Degree",
+                                "token": "highly",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Toxic_substance",
+                                "token": "non-living , manufactured chemicals",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            },
+                            {
+                                "frame element": "Toxic_substance",
+                                "token": "that",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "enter",
+                        "span": [
+                            17,
+                            17
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "the body",
+                                "span": [
+                                    18,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Path",
+                                "token": "through the lungs or the skin",
+                                "span": [
+                                    20,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Theme",
+                                "token": "Chemical warfare ( CW ) agents",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "body",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Body_part",
+                                "token": "body",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "skin",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "skin",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Body_part",
+                                "token": "body",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "skin",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Hostile_encounter",
+                        "lexical token": "CW",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Instrument",
+                                "token": "Chemical",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "can",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "enter the body through the lungs or the skin",
+                                "span": [
+                                    17,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "Chemical warfare ( CW ) agents",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Manufacturing",
+                        "lexical token": "manufactured",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "chemicals",
+                                "span": [
+                                    10,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Dead_or_alive",
+                        "lexical token": "non-living",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Figure",
+                                "token": "manufactured chemicals",
+                                "span": [
+                                    9,
+                                    10
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"In 1945 , the twenty - seven - year - old Anwar al-Sadat and his friends decided to assassinate the on - and - off prime minister of Egypt , Nahhas Pasha .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "In 1945 , the twenty - seven - year - old Anwar al-Sadat and his friends decided to assassinate the on - and - off prime minister of Egypt , Nahhas Pasha .",
+                "frame annotations": [
+                    {
+                        "frame name": "Personal_relationship",
+                        "lexical token": "friends",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Partner_2",
+                                "token": "his",
+                                "span": [
+                                    14,
+                                    14
+                                ]
+                            },
+                            {
+                                "frame element": "Partner_1",
+                                "token": "friends",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Deciding",
+                        "lexical token": "decided",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "the twenty - seven - year - old Anwar al-Sadat and his friends",
+                                "span": [
+                                    3,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Decision",
+                                "token": "to assassinate the on - and - off prime minister of Egypt , Nahhas Pasha",
+                                "span": [
+                                    17,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In 1945",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Killing",
+                        "lexical token": "assassinate",
+                        "span": [
+                            18,
+                            18
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Killer",
+                                "token": "the twenty - seven - year - old Anwar al-Sadat and his friends",
+                                "span": [
+                                    3,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Victim",
+                                "token": "the on - and - off prime minister of Egypt , Nahhas Pasha",
+                                "span": [
+                                    19,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "prime",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Governed",
+                                "token": "of Egypt",
+                                "span": [
+                                    27,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "Nahhas Pasha",
+                                "span": [
+                                    30,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "on - and - off",
+                                "span": [
+                                    20,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Leadership",
+                        "lexical token": "minister",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Governed",
+                                "token": "of Egypt",
+                                "span": [
+                                    27,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Leader",
+                                "token": "Nahhas Pasha",
+                                "span": [
+                                    30,
+                                    31
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "on - and - off",
+                                "span": [
+                                    20,
+                                    24
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Also , the visitors with high security clearance should be designated parking spots inside the location .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Also , the visitors with high security clearance should be designated parking spots inside the location .",
+                "frame annotations": [
+                    {
+                        "frame name": "Visiting",
+                        "lexical token": "visitors",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "visitors",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Position_on_a_scale",
+                        "lexical token": "high",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "security clearance",
+                                "span": [
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Value",
+                                "token": "high",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Appointing",
+                        "lexical token": "designated",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Official",
+                                "token": "the visitors with high security clearance",
+                                "span": [
+                                    2,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Role",
+                                "token": "parking spots inside the location",
+                                "span": [
+                                    11,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "spots",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "spots",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "location",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Part_inner_outer",
+                        "lexical token": "inside",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "inside",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Whole",
+                                "token": "the location",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale",
+                        "lexical token": "location",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "spots",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "location",
+                                "span": [
+                                    15,
+                                    15
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Some come from families where , through therapy , there is hope for reunification .\".": {
+                "sentence": "Some come from families where , through therapy , there is hope for reunification .",
+                "frame annotations": [
+                    {
+                        "frame name": "Arriving",
+                        "lexical token": "come",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "Some",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Goal",
+                                "token": "from families where , through therapy , there is hope for reunification",
+                                "span": [
+                                    2,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cure",
+                        "lexical token": "therapy",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": []
+                    },
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "there",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "hope for reunification",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Existence",
+                        "lexical token": "is",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "hope for reunification",
+                                "span": [
+                                    11,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Desiring",
+                        "lexical token": "hope",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "for reunification",
+                                "span": [
+                                    12,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Kinship",
+                        "lexical token": "families",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Relatives",
+                                "token": "families",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Descriptor",
+                                "token": "where , through therapy , there is hope for reunification",
+                                "span": [
+                                    4,
+                                    13
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"Iran 's only nuclear power plants in 1979 were the two plants under construction at Bushehr , under contract with Germany 's Siemens .\".": {
+                "sentence": "Iran 's only nuclear power plants in 1979 were the two plants under construction at Bushehr , under contract with Germany 's Siemens .",
+                "frame annotations": [
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "plants",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "Iran 's",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "nuclear power",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plants",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plants",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "plants",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "Iran 's",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "nuclear power",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plants",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "plants",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Building",
+                        "lexical token": "construction",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Created_entity",
+                                "token": "the two plants",
+                                "span": [
+                                    9,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "at Bushehr",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            },
+                            {
+                                "frame element": "Means",
+                                "token": "under contract with Germany 's Siemens",
+                                "span": [
+                                    17,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sole_instance",
+                        "lexical token": "only",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "nuclear power plants in 1979",
+                                "span": [
+                                    3,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "only nuclear power plants in 1979",
+                                "span": [
+                                    2,
+                                    7
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Electricity",
+                        "lexical token": "power",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Electricity",
+                                "token": "power",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Source",
+                                "token": "nuclear",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

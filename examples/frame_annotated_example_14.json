@@ -1,0 +1,1756 @@
+{
+    "Rules to annotate a sentence based on framenet": "Imagine you are an expert in FrameNet annotations. Your task is to annotate sentences provided by the user, ensuring that each annotation conforms to the given JSON schema. Make sure your output is formatted correctly as a JSON object.",
+    "JSON schema of annotating sentence on the knowledge of frameNet": {
+        "sentence": "Original sentence",
+        "frame annotations": [
+            {
+                "frame name": "Frame name 1",
+                "lexical token": "token evoking frame 1",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            },
+            {
+                "frame name": "Frame name 2",
+                "lexical token": "token evoking frame 2",
+                "span": [
+                    "start lexical token index",
+                    "end lexical token index"
+                ],
+                "frame elements": [
+                    {
+                        "frame element": "frame element 1 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 2 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    },
+                    {
+                        "frame element": "frame element 3 role",
+                        "token": "Frame element text in sentence",
+                        "span": [
+                            "start token index",
+                            "end token index"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "Example for reference": [
+        {
+            "Given the sentence \"But Mr . Baynes had kept his most sinister exhibit to the last .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "But Mr . Baynes had kept his most sinister exhibit to the last .",
+                "frame annotations": [
+                    {
+                        "frame name": "Retaining",
+                        "lexical token": "kept",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "his most sinister exhibit",
+                                "span": [
+                                    6,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "Mr . Baynes",
+                                "span": [
+                                    1,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "to the last",
+                                "span": [
+                                    10,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Scientists are reported to be in Iran as of 2/92 .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Scientists are reported to be in Iran as of 2/92 .",
+                "frame annotations": [
+                    {
+                        "frame name": "Statement",
+                        "lexical token": "reported",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Message",
+                                "token": "Scientists",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "to be in Iran as of 2/92",
+                                "span": [
+                                    3,
+                                    9
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Interior_profile_relation",
+                        "lexical token": "in",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Ground",
+                                "token": "Iran",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Figure",
+                                "token": "Scientists",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Eventually , the shelter received word that the alleged hijacker 5 miles away had been a medevac helicopter .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Eventually , the shelter received word that the alleged hijacker 5 miles away had been a medevac helicopter .",
+                "frame annotations": [
+                    {
+                        "frame name": "Unattributed_information",
+                        "lexical token": "alleged",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reported_fact",
+                                "token": "hijacker 5 miles away",
+                                "span": [
+                                    9,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"In an effort to provide yet one more thing to bet on , players are imported from Spain to take part in this lightning - fast Basque ball game .\".": {
+                "sentence": "In an effort to provide yet one more thing to bet on , players are imported from Spain to take part in this lightning - fast Basque ball game .",
+                "frame annotations": [
+                    {
+                        "frame name": "Attempt",
+                        "lexical token": "effort",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goal",
+                                "token": "to provide yet one more thing to bet on",
+                                "span": [
+                                    3,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Supply",
+                        "lexical token": "provide",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Theme",
+                                "token": "one more thing to bet on",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Cardinal_numbers",
+                        "lexical token": "one",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Number",
+                                "token": "one",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Entity",
+                                "token": "thing",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Increment",
+                        "lexical token": "more",
+                        "span": [
+                            7,
+                            7
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Class",
+                                "token": "thing to bet on",
+                                "span": [
+                                    8,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Increment",
+                                "token": "one",
+                                "span": [
+                                    6,
+                                    6
+                                ]
+                            },
+                            {
+                                "frame element": "Added_set",
+                                "token": "one more thing to bet on",
+                                "span": [
+                                    6,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Competition",
+                        "lexical token": "players",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Participants",
+                                "token": "players",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Importing",
+                        "lexical token": "imported",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Goods",
+                                "token": "players",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            },
+                            {
+                                "frame element": "Exporting_area",
+                                "token": "from Spain",
+                                "span": [
+                                    16,
+                                    17
+                                ]
+                            },
+                            {
+                                "frame element": "Purpose",
+                                "token": "to take part in this lightning - fast Basque ball game",
+                                "span": [
+                                    18,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Participation",
+                        "lexical token": "take",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "in this lightning - fast Basque ball game",
+                                "span": [
+                                    21,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Participation",
+                        "lexical token": "part",
+                        "span": [
+                            20,
+                            20
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Event",
+                                "token": "in this lightning - fast Basque ball game",
+                                "span": [
+                                    21,
+                                    28
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Speed_description",
+                        "lexical token": "fast",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Basque ball game",
+                                "span": [
+                                    26,
+                                    28
+                                ]
+                            },
+                            {
+                                "frame element": "Speed",
+                                "token": "lightning",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"This report , of questionable reliability , was vigorously denied by the Ministry of National Defense ( MND ) .\".": {
+                "sentence": "This report , of questionable reliability , was vigorously denied by the Ministry of National Defense ( MND ) .",
+                "frame annotations": [
+                    {
+                        "frame name": "Being_questionable",
+                        "lexical token": "questionable",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Behavior",
+                                "token": "reliability",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Affirm_or_deny",
+                        "lexical token": "denied",
+                        "span": [
+                            9,
+                            9
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Speaker",
+                                "token": "by the Ministry of National Defense ( MND )",
+                                "span": [
+                                    10,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "vigorously",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Message",
+                                "token": "This report , of questionable reliability ,",
+                                "span": [
+                                    0,
+                                    6
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Text",
+                        "lexical token": "report",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Text",
+                                "token": "report",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Trust",
+                        "lexical token": "reliability",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Information",
+                                "token": "This report",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "questionable",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Given the sentence \"The man mopped his forehead with his handkerchief and agave a long sigh of relief .\", provide the annotated output according to FrameNet guidelines.": {
+                "sentence": "The man mopped his forehead with his handkerchief and agave a long sigh of relief .",
+                "frame annotations": [
+                    {
+                        "frame name": "Body_parts",
+                        "lexical token": "forehead",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Possessor",
+                                "token": "his",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Body_part",
+                                "token": "forehead",
+                                "span": [
+                                    4,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "People",
+                        "lexical token": "man",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "man",
+                                "span": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Breathing",
+                        "lexical token": "sigh",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Duration",
+                                "token": "long",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Agent",
+                                "token": "The man",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Internal_cause",
+                                "token": "of relief",
+                                "span": [
+                                    13,
+                                    14
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Duration_description",
+                        "lexical token": "long",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Eventuality",
+                                "token": "sigh",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "For the sentence \"Iran 's ballistic missile capabilities are complemented by extensive nuclear , biological , and chemical weapons programs , which themselves are the recipients of significant foreign assistance .\", generate the annotated output based on FrameNet standards.": {
+                "sentence": "Iran 's ballistic missile capabilities are complemented by extensive nuclear , biological , and chemical weapons programs , which themselves are the recipients of significant foreign assistance .",
+                "frame annotations": [
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "ballistic",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Capability",
+                        "lexical token": "capabilities",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Entity",
+                                "token": "Iran 's",
+                                "span": [
+                                    0,
+                                    1
+                                ]
+                            },
+                            {
+                                "frame element": "Event",
+                                "token": "ballistic missile",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Rest",
+                        "lexical token": "complemented",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Part",
+                                "token": "Iran 's ballistic missile capabilities",
+                                "span": [
+                                    0,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Rest",
+                                "token": "by extensive nuclear , biological , and chemical weapons programs , which themselves are the recipients of significant foreign assistance",
+                                "span": [
+                                    7,
+                                    26
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "chemical",
+                        "span": [
+                            14,
+                            14
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    2,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Weapon",
+                                "token": "chemical weapons",
+                                "span": [
+                                    14,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "programs",
+                        "span": [
+                            16,
+                            16
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Salient_entity",
+                                "token": "extensive nuclear , biological , and chemical weapons",
+                                "span": [
+                                    8,
+                                    15
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Assistance",
+                        "lexical token": "assistance",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Helper",
+                                "token": "foreign",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Manner",
+                                "token": "significant",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Foreign_or_domestic_country",
+                        "lexical token": "foreign",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Current_country",
+                                "token": "foreign",
+                                "span": [
+                                    25,
+                                    25
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Annotate the sentence \"Following a July 1989 flight - test of what Pretoria described as a `` booster rocket '' in a space - launch program , U.S. intelligence noted striking similarities between this system and Israel 's intermediate - range Jericho - 2 ballistic missile .\" following the FrameNet annotation rules, and provide the output.": {
+                "sentence": "Following a July 1989 flight - test of what Pretoria described as a `` booster rocket '' in a space - launch program , U.S. intelligence noted striking similarities between this system and Israel 's intermediate - range Jericho - 2 ballistic missile .",
+                "frame annotations": [
+                    {
+                        "frame name": "Operational_testing",
+                        "lexical token": "flight",
+                        "span": [
+                            4,
+                            4
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "of what Pretoria described as a `` booster rocket ''",
+                                "span": [
+                                    7,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Circumstances",
+                                "token": "in a space - launch program",
+                                "span": [
+                                    17,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Operational_testing",
+                        "lexical token": "test",
+                        "span": [
+                            6,
+                            6
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Product",
+                                "token": "of what Pretoria described as a `` booster rocket ''",
+                                "span": [
+                                    7,
+                                    16
+                                ]
+                            },
+                            {
+                                "frame element": "Circumstances",
+                                "token": "in a space - launch program",
+                                "span": [
+                                    17,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Communicate_categorization",
+                        "lexical token": "described",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Item",
+                                "token": "what",
+                                "span": [
+                                    8,
+                                    8
+                                ]
+                            },
+                            {
+                                "frame element": "Speaker",
+                                "token": "Pretoria",
+                                "span": [
+                                    9,
+                                    9
+                                ]
+                            },
+                            {
+                                "frame element": "Category",
+                                "token": "as a `` booster rocket ''",
+                                "span": [
+                                    11,
+                                    16
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Shoot_projectiles",
+                        "lexical token": "launch",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Area",
+                                "token": "space",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Project",
+                        "lexical token": "program",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Activity",
+                                "token": "space - launch",
+                                "span": [
+                                    19,
+                                    21
+                                ]
+                            },
+                            {
+                                "frame element": "Project",
+                                "token": "program",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Becoming_aware",
+                        "lexical token": "noted",
+                        "span": [
+                            26,
+                            26
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Cognizer",
+                                "token": "U.S. intelligence",
+                                "span": [
+                                    24,
+                                    25
+                                ]
+                            },
+                            {
+                                "frame element": "Phenomenon",
+                                "token": "striking similarities between this system and Israel 's intermediate - range Jericho - 2 ballistic missile",
+                                "span": [
+                                    27,
+                                    42
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Similarity",
+                        "lexical token": "similarities",
+                        "span": [
+                            28,
+                            28
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Depictive",
+                                "token": "striking",
+                                "span": [
+                                    27,
+                                    27
+                                ]
+                            },
+                            {
+                                "frame element": "Entities",
+                                "token": "between this system and Israel 's intermediate - range Jericho - 2 ballistic missile",
+                                "span": [
+                                    29,
+                                    42
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Gizmo",
+                        "lexical token": "system",
+                        "span": [
+                            31,
+                            31
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Gizmo",
+                                "token": "system",
+                                "span": [
+                                    31,
+                                    31
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Range",
+                        "lexical token": "range",
+                        "span": [
+                            37,
+                            37
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Distance",
+                                "token": "intermediate",
+                                "span": [
+                                    35,
+                                    35
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "ballistic",
+                        "span": [
+                            41,
+                            41
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    41,
+                                    42
+                                ]
+                            },
+                            {
+                                "frame element": "Wielder",
+                                "token": "Israel 's",
+                                "span": [
+                                    33,
+                                    34
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "intermediate - range",
+                                "span": [
+                                    35,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Name",
+                                "token": "Jericho - 2",
+                                "span": [
+                                    38,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "missile",
+                        "span": [
+                            42,
+                            42
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "ballistic missile",
+                                "span": [
+                                    41,
+                                    42
+                                ]
+                            },
+                            {
+                                "frame element": "Wielder",
+                                "token": "Israel 's",
+                                "span": [
+                                    33,
+                                    34
+                                ]
+                            },
+                            {
+                                "frame element": "Type",
+                                "token": "intermediate - range",
+                                "span": [
+                                    35,
+                                    37
+                                ]
+                            },
+                            {
+                                "frame element": "Name",
+                                "token": "Jericho - 2",
+                                "span": [
+                                    38,
+                                    40
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Relative_time",
+                        "lexical token": "Following",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Landmark_occasion",
+                                "token": "a July 1989 flight - test of what Pretoria described as a `` booster rocket '' in a space - launch program",
+                                "span": [
+                                    1,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Focal_occasion",
+                                "token": "U.S. intelligence noted striking similarities between this system and Israel 's intermediate - range Jericho - 2 ballistic missile",
+                                "span": [
+                                    24,
+                                    42
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Using the FrameNet framework, produce the annotated output for the sentence \"Firefighters rescue nearly a dozen animals in Buffalo , New York house fire\".": {
+                "sentence": "Firefighters rescue nearly a dozen animals in Buffalo , New York house fire",
+                "frame annotations": [
+                    {
+                        "frame name": "People_by_vocation",
+                        "lexical token": "Firefighters",
+                        "span": [
+                            0,
+                            0
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Person",
+                                "token": "Firefighters",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Proportional_quantity",
+                        "lexical token": "nearly",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Reference_quantity",
+                                "token": "a dozen",
+                                "span": [
+                                    3,
+                                    4
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "animals",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Denoted_quantity",
+                                "token": "nearly a dozen",
+                                "span": [
+                                    2,
+                                    4
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Fire_burning",
+                        "lexical token": "fire",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Fire",
+                                "token": "fire",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Fuel",
+                                "token": "house",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Place",
+                                "token": "Buffalo , New York",
+                                "span": [
+                                    7,
+                                    10
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Animals",
+                        "lexical token": "animals",
+                        "span": [
+                            5,
+                            5
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Animal",
+                                "token": "animals",
+                                "span": [
+                                    5,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Buildings",
+                        "lexical token": "house",
+                        "span": [
+                            11,
+                            11
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Building",
+                                "token": "house",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Rescuing",
+                        "lexical token": "rescue",
+                        "span": [
+                            1,
+                            1
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Agent",
+                                "token": "Firefighters",
+                                "span": [
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "nearly a dozen animals",
+                                "span": [
+                                    2,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Harmful_situation",
+                                "token": "in Buffalo , New York house fire",
+                                "span": [
+                                    6,
+                                    12
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Please provide a FrameNet-compliant annotated version of the sentence \"In its first decade of independence , Kazakhstan dismantled and destroyed Soviet weapons systems and facilities left on its territory and signed several international nonproliferation treaties .\".": {
+                "sentence": "In its first decade of independence , Kazakhstan dismantled and destroyed Soviet weapons systems and facilities left on its territory and signed several international nonproliferation treaties .",
+                "frame annotations": [
+                    {
+                        "frame name": "Destroying",
+                        "lexical token": "dismantled",
+                        "span": [
+                            8,
+                            8
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Destroyer",
+                                "token": "Kazakhstan",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "Soviet weapons systems and facilities left on its territory",
+                                "span": [
+                                    11,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In its first decade of independence",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In its first decade of independence",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Destroyer",
+                                "token": "Kazakhstan",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "Soviet weapons systems and facilities left on its territory",
+                                "span": [
+                                    11,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Measure_duration",
+                        "lexical token": "decade",
+                        "span": [
+                            3,
+                            3
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Unit",
+                                "token": "decade",
+                                "span": [
+                                    3,
+                                    3
+                                ]
+                            },
+                            {
+                                "frame element": "Count",
+                                "token": "first",
+                                "span": [
+                                    2,
+                                    2
+                                ]
+                            },
+                            {
+                                "frame element": "Process",
+                                "token": "of independence",
+                                "span": [
+                                    4,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Destroying",
+                        "lexical token": "destroyed",
+                        "span": [
+                            10,
+                            10
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Destroyer",
+                                "token": "Kazakhstan",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "Soviet weapons systems and facilities left on its territory",
+                                "span": [
+                                    11,
+                                    19
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In its first decade of independence",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Time",
+                                "token": "In its first decade of independence",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Destroyer",
+                                "token": "Kazakhstan",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Patient",
+                                "token": "Soviet weapons systems and facilities left on its territory",
+                                "span": [
+                                    11,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Sign_agreement",
+                        "lexical token": "signed",
+                        "span": [
+                            21,
+                            21
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Time",
+                                "token": "In its first decade of independence",
+                                "span": [
+                                    0,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Signatory",
+                                "token": "Kazakhstan",
+                                "span": [
+                                    7,
+                                    7
+                                ]
+                            },
+                            {
+                                "frame element": "Agreement",
+                                "token": "several international nonproliferation treaties",
+                                "span": [
+                                    22,
+                                    25
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Documents",
+                        "lexical token": "treaties",
+                        "span": [
+                            25,
+                            25
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Obligation",
+                                "token": "nonproliferation",
+                                "span": [
+                                    24,
+                                    24
+                                ]
+                            },
+                            {
+                                "frame element": "Bearer",
+                                "token": "international",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "international",
+                        "span": [
+                            23,
+                            23
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "international",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "territory",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Locale_by_use",
+                        "lexical token": "facilities",
+                        "span": [
+                            15,
+                            15
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Descriptor",
+                                "token": "left on its territory",
+                                "span": [
+                                    16,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Political_locales",
+                        "lexical token": "territory",
+                        "span": [
+                            19,
+                            19
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Locale",
+                                "token": "international",
+                                "span": [
+                                    23,
+                                    23
+                                ]
+                            },
+                            {
+                                "frame element": "Container_possessor",
+                                "token": "its",
+                                "span": [
+                                    18,
+                                    18
+                                ]
+                            },
+                            {
+                                "frame element": "Locale",
+                                "token": "territory",
+                                "span": [
+                                    19,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Weapon",
+                        "lexical token": "weapons",
+                        "span": [
+                            12,
+                            12
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Weapon",
+                                "token": "weapons",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Ordinal_numbers",
+                        "lexical token": "first",
+                        "span": [
+                            2,
+                            2
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Type",
+                                "token": "decade of independence",
+                                "span": [
+                                    3,
+                                    5
+                                ]
+                            },
+                            {
+                                "frame element": "Item",
+                                "token": "its first decade of independence",
+                                "span": [
+                                    1,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Gizmo",
+                        "lexical token": "systems",
+                        "span": [
+                            13,
+                            13
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "User",
+                                "token": "Soviet",
+                                "span": [
+                                    11,
+                                    11
+                                ]
+                            },
+                            {
+                                "frame element": "Use",
+                                "token": "weapons",
+                                "span": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            {
+                                "frame element": "Gizmo",
+                                "token": "systems",
+                                "span": [
+                                    13,
+                                    13
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "frame name": "Quantified_mass",
+                        "lexical token": "several",
+                        "span": [
+                            22,
+                            22
+                        ],
+                        "frame elements": [
+                            {
+                                "frame element": "Quantity",
+                                "token": "several",
+                                "span": [
+                                    22,
+                                    22
+                                ]
+                            },
+                            {
+                                "frame element": "Individuals",
+                                "token": "international nonproliferation treaties",
+                                "span": [
+                                    23,
+                                    25
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
