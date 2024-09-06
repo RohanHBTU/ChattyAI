@@ -3,7 +3,7 @@
 source ./config.sh
 
 cd $TMP_WORK_DIR/$PROG_DIR
-source venv/bin/activate
+source .venv/bin/activate
 
 if [ "$NODE" == "gpu" ]; then
     srun -p gpu \
