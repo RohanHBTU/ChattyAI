@@ -1,33 +1,53 @@
 import re
 import logging
 import sys
-import os 
+import os
+
+# Set environment variables
 os.environ["HF_TOKEN"] = "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"
 
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+# Configure logging
+logging.basicConfig(stream=sys.stdout, level=logging.ERROR)  # Set to ERROR level
+logging.getLogger().setLevel(logging.ERROR)  # Ensure root logger is at ERROR level
 
 import torch
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core import PromptTemplate
+from transformers import AutoTokenizer, logging as hf_logging
+from tqdm import tqdm
 
+# Disable tqdm progress bars
+tqdm.disable = True
 
-#selected_model = "../LLMs/llama-models/models/llama3_1/llama-3.1-8B-Instruct-hf"
+# Suppress HuggingFace and transformers logging output
+hf_logging.set_verbosity_error()
+
+# Selected model path or identifier
 selected_model = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-#selected_model = "meta-llama/Meta-Llama-3-8B"
 
-from llama_index.core import PromptTemplate
-system_prompt = "You are a Q&A assistant on FrameNet. Your goal is to answer questions as accurately as possible based on the instructions and context provided. Avoid mentioning any unrelated concepts or information related to the user prompt. Strictly adhere to the instructions given by the user."
-# This will wrap the default prompts that are internal to llama-index
+# Define system prompt
+#system_prompt = "You are a Q&A assistant on FrameNet. Your goal is to answer questions as accurately as possible based on the instructions and context provided. Avoid mentioning any unrelated concepts or information related to the user prompt. Strictly adhere to the instructions given by the user."
+
+system_prompt = """You are Chatty AI, a specialized AI chatbot focused on Construction Grammar (CxG) and FrameNet. Your primary knowledge base includes academic research publications on CxG and FrameNet, as well as the FrameNet 1.7 dataset. You aim to assist researchers, linguists, and students with in-depth, accurate, and contextually relevant information.
+
+When responding:
+
+1. Use clear and concise language suitable for an academic audience.
+2. Provide definitions, explanations, and overviews of terms, concepts, and theories related to CxG and FrameNet when necessary.
+3. If the user question is outside the scope of CxG, FrameNet, or related topics, politely inform them that your specialization is limited to these areas and encourage them to ask about a relevant topic.
+4. Suggest related topics or provide general linguistic insights when appropriate.
+5. Respond with ‘My name is Chatty AI’ when asked for your name.
+
+Remain informative, precise, and helpful, always grounding your responses in the provided knowledge base."""
+
+# Define query wrapper prompt
 query_wrapper_prompt = PromptTemplate("<|USER|>{query_str}<|ASSISTANT|>")
 
-
-from transformers import AutoTokenizer
-from llama_index.llms.huggingface import HuggingFaceLLM
-#tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+# Initialize tokenizer
 tokenizer = AutoTokenizer.from_pretrained(selected_model)
-stopping_ids = [tokenizer.eos_token_id,tokenizer.convert_tokens_to_ids("<|eot_id|>")]
+stopping_ids = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
 
+# Initialize HuggingFace LLM
 llm = HuggingFaceLLM(
     context_window=4096,
     max_new_tokens=2048,
@@ -38,31 +58,32 @@ llm = HuggingFaceLLM(
     model_name=selected_model,
     device_map="auto",
     stopping_ids=stopping_ids,
-    # change these settings below depending on your GPU
     model_kwargs={"torch_dtype": torch.float16}
-                #  ,"load_in_8bit": True},
 )
 
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-cache_direc="../embed_model"
-embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5",cache_folder=cache_direc)
+# Set cache directory for embeddings
+cache_direc = "../embed_model"
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5", cache_folder=cache_direc)
 
 from llama_index.core import Settings
 
+# Configure LLM and embedding model settings
 Settings.llm = llm
 Settings.embed_model = embed_model
 
 from llama_index.core import SimpleDirectoryReader
 
-# load documents
+# Load documents
 documents = SimpleDirectoryReader("../frame_and_papers/").load_data()
 
 from llama_index.core import VectorStoreIndex
 
+# Create vector store index from documents
 index = VectorStoreIndex.from_documents(documents)
 
-# set Logging to DEBUG for more detailed outputs
+# Initialize chat engine
 chat_engine = index.as_query_engine()
 
 def gen_output(prom):
