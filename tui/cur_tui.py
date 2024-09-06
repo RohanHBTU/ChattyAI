@@ -1,5 +1,8 @@
+from model_interact import gen_output
+#from model_gpt import gen_output
 import curses
 import signal
+import time
 
 def signal_handler(sig, frame):
     """Ignore Ctrl+C (SIGINT) to prevent the program from exiting."""
@@ -20,7 +23,8 @@ def wrap_text(text, width):
 
 def draw_scrollable_window(win, lines, start_line):
     """Draws a window with scrollable content, ensuring indices are in range."""
-    win.clear()
+    #win.clear()
+    win.erase()
     h, w = win.getmaxyx()
     # Ensure start_line is within the valid range
     start_line = min(max(start_line, 0), max(len(lines) - h + 1, 0))
@@ -31,7 +35,7 @@ def draw_scrollable_window(win, lines, start_line):
 
 def bot_response(user_input):
     """Generate a bot response based on user input (for now, the same as input)."""
-    return user_input
+    return gen_output(user_input)
 
 def main(stdscr):
     # Handle SIGINT (Ctrl+C)
@@ -39,7 +43,8 @@ def main(stdscr):
     
     # Initialize curses
     curses.curs_set(0)  # DO NOT Show the cursor
-    stdscr.clear()
+    #stdscr.clear()
+    stdscr.erase()
 
     # Window dimensions
     height, width = stdscr.getmaxyx()
@@ -99,7 +104,7 @@ def main(stdscr):
 
         # Wrap input text into lines that fit the input window width
         input_text_cur=input_text[:cursor_x]
-        input_text_cur+="█"
+        input_text_cur+="|"
         input_text_cur+=input_text[cursor_x:]
         wrapped_input_lines = wrap_text(input_text_cur, chat_width - 1)
         
@@ -107,7 +112,8 @@ def main(stdscr):
         scroll_index=len(wrap_text(input_text[:cursor_x], chat_width - 1))
 
         # Draw the input window with scroll
-        input_win.clear()
+        #input_win.clear()
+        input_win.erase()
         for idx, line in enumerate(wrapped_input_lines[input_scroll_pos:input_scroll_pos + 3]):
             input_win.addstr(idx, 0, line)
         input_win.refresh()
@@ -188,5 +194,23 @@ def main(stdscr):
             # Update scrolling position if input lines exceed window height
             if len(wrapped_input_lines) > 3:
                 input_scroll_pos = max(0, scroll_index - 2)
+
+    stdscr.erase()
+    stdscr.addstr((height//2) -5, (width//2) -25, " _____ _                 _     __     __         ")
+    stdscr.addstr((height//2) -4, (width//2) -25, "|_   _| |               | |    \ \   / /         ")
+    stdscr.addstr((height//2) -3, (width//2) -25, "  | | | |__   __ _ _ __ | | __  \ \_/ /__  _   _ ")
+    stdscr.addstr((height//2) -2, (width//2) -25, "  | | | '_ \ / _` | '_ \| |/ /   \   / _ \| | | |")
+    stdscr.addstr((height//2) -1, (width//2) -25, "  | | | | | | (_| | | | |   <     | | (_) | |_| |")
+    stdscr.addstr((height//2)   , (width//2) -25, "  |_| |_| |_|\__,_|_| |_|_|\_\    |_|\___/ \__,_|")
+
+    t=3
+    for _ in range(3):
+        if t!=1:
+            stdscr.addstr((height//2)+3, (width//2) -9, f"Closing in {t} seconds",curses.A_BOLD)
+        else:
+            stdscr.addstr((height//2)+3, (width//2) -9, f"Closing in {t} second ",curses.A_BOLD)
+        stdscr.refresh()
+        time.sleep(1)
+        t-=1
 
 curses.wrapper(main)
