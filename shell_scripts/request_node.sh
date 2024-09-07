@@ -4,6 +4,7 @@ source ./config.sh
 
 cd $TMP_WORK_DIR/$PROG_DIR
 source .venv/bin/activate
+cd tui
 
 if [ "$NODE" == "gpu" ]; then
     srun -p gpu \
@@ -24,3 +25,4 @@ else
     echo "Unknown NODE type: $NODE. Please specify 'gpu' or 'cpu'."
     exit 1
 fi
+
