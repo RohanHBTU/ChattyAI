@@ -138,6 +138,8 @@ def main(stdscr):
                 output_scroll_pos -= 1
             elif key == 9:  # Tab key
                 current_focus = 'input'
+            elif key == 5:  # Ctrl+E to exit (ASCII 5)
+                break  # Exit the main loop
         elif current_focus == 'input':
             stdscr.addstr(height-1, 1, "Focus: Input Window ", curses.A_BOLD)
             key = stdscr.getch()
