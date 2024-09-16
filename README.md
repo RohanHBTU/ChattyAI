@@ -59,7 +59,14 @@ This is a terminal application built for CWRU HPC to assist researchers, educato
 
 ### Usage
 
-The program can be run using the `python3 cur_mnt.py` command.
+The program can be run using
+
+```
+cd tui
+
+
+python3 cur_mnt.py
+```
 
 #### Key Bindings
 

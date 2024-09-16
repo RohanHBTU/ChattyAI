@@ -91,7 +91,7 @@ from llama_index.core import SimpleDirectoryReader
 #parser = JSONReader()
 #file_extractor = {".json": parser}
 #documents = SimpleDirectoryReader("../tmp/", file_extractor=file_extractor).load_data()
-documents = SimpleDirectoryReader("../tmp/").load_data()
+documents = SimpleDirectoryReader("../frame_and_papers_compressed/").load_data()
 
 from llama_index.core import VectorStoreIndex
 
