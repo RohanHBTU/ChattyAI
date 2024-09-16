@@ -1,5 +1,7 @@
 .venv
 
+.env
+
 LLMs/llama-models/
 
 LLMs/llama3/

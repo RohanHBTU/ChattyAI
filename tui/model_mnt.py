@@ -5,7 +5,14 @@ import os
 
 # Set environment variables
 os.environ["PYTORCH_CUDA_ALLOC_CONF"]="expandable_segments:True"
-os.environ["HF_TOKEN"] = "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"
+import os.path
+
+from dotenv import load_dotenv
+load_dotenv()
+from os import getenv
+from huggingface_hub import login 
+login(token=getenv("HUGGINGFACE_API_KEY"))
+
 
 # Configure logging
 logging.basicConfig(stream=sys.stdout, level=logging.ERROR)  # Set to ERROR level
