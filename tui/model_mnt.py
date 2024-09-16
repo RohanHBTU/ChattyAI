@@ -4,6 +4,7 @@ import sys
 import os
 
 # Set environment variables
+os.environ["PYTORCH_CUDA_ALLOC_CONF"]="expandable_segments:True"
 os.environ["HF_TOKEN"] = "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"
 
 # Configure logging
@@ -36,7 +37,7 @@ When responding:
 2. Provide definitions, explanations, and overviews of terms, concepts, and theories related to CxG and FrameNet when necessary.
 3. If the user question is outside the scope of CxG, FrameNet, or related topics, politely inform them that your specialization is limited to these areas and encourage them to ask about a relevant topic.
 4. Suggest related topics or provide general linguistic insights when appropriate.
-5. Respond with ‘My name is Chatty AI’ when asked for your name.
+5. Generate only the requested output and keep it brief also don't repeat the output. Avoid repetition and creating output with gibberish text.
 
 Remain informative, precise, and helpful, always grounding your responses in the provided knowledge base."""
 
@@ -49,8 +50,8 @@ stopping_ids = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_i
 
 # Initialize HuggingFace LLM
 llm = HuggingFaceLLM(
-    context_window=4096,
-    max_new_tokens=2048,
+    context_window=3584,
+    max_new_tokens=1536,
     generate_kwargs={"temperature": 0.1, "do_sample": True},
     system_prompt=system_prompt,
     query_wrapper_prompt=query_wrapper_prompt,
@@ -66,6 +67,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 # Set cache directory for embeddings
 cache_direc = "../embed_model"
 embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5", cache_folder=cache_direc)
+#embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-mpnet-base-v2", cache_folder=cache_direc)
 
 from llama_index.core import Settings
 
@@ -73,10 +75,16 @@ from llama_index.core import Settings
 Settings.llm = llm
 Settings.embed_model = embed_model
 
+from llama_index.readers.json import JSONReader
 from llama_index.core import SimpleDirectoryReader
 
 # Load documents
-documents = SimpleDirectoryReader("../frame_and_papers/").load_data()
+#documents = SimpleDirectoryReader("../frame_and_papers/").load_data()
+#documents = SimpleDirectoryReader("../frame_and_papers_compressed/").load_data()
+#parser = JSONReader()
+#file_extractor = {".json": parser}
+#documents = SimpleDirectoryReader("../tmp/", file_extractor=file_extractor).load_data()
+documents = SimpleDirectoryReader("../tmp/").load_data()
 
 from llama_index.core import VectorStoreIndex
 
