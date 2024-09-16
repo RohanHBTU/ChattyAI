@@ -9,6 +9,7 @@ To get the insight into the work being done or already implemented, read my week
 ## Table of Contents
 
 - [Installation](#installation)
+- [FrameChat](#framechat)
 - [Frame Annotation Evaluation](#frame-annotation-evaluation)
 - [Fulltext Annotation Parser](#fulltext-annotation-parser)
 - [FrameNet XML Parser](#framenet-xml-parser)
@@ -39,6 +40,41 @@ touch .env
 # Enter your Huggingface API key in ".env" like this:
 # HUGGINGFACE_API_KEY="..."
 ```
+
+## FrameChat
+
+### Introduction
+
+This is a terminal application built for CWRU HPC to assist researchers, educators, and students in the fields of Construction Grammar and FrameNet. Users can use this as a tool to tinker with frames and ask several queries related to it.
+
+### Prerequisites
+
+1. Basic installation mentioned in [Installation](#installation).
+2. Setup FrameNet dataset.
+    - Copy the FrameNet dataset folder `frame/` to the work directory.
+    - Create JSON-format FrameNet dataset folder `frame_and_papers/` using [FrameNet XML Parser](#framenet-xml-parser).
+    - Paste the research papers available in FrameNet dataset folder into `frame_and_papers/`.
+    - (Optional) Combine all indiviual FrameNet files into a single JSON frame file.
+3. Request an interactive job on the GPU node of CWRU HPC.
+
+### Usage
+
+The program can be run using the `python3 cur_mnt.py` command.
+
+#### Key Bindings
+
+When in Frame Blender interface:
+
+- `Tab`: Switch focus between Input and Output windows
+- `Enter`: To add newline
+- `Ctrl+g`: To reset long context
+- `Arrow Keys`: Left/Right in Input Window and Up/Down in Output Window
+- `Ctrl+a`: To annotate a sentence prompt
+- `Ctrl+t`: To toggle between Short and Long context modes
+- `Ctrl+r`: To send the input
+- `Ctrl+f`: To get the frame details prompt
+- `Ctrl+e`: To exit the application
+- `Ctrl+c`: (Only applicable when query in process) to terminate the application
 
 ## Frame Annotation Evaluation
 

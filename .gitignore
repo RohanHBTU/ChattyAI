@@ -6,6 +6,8 @@ LLMs/llama3/
 
 LLMs/llama/
 
+frame_and_papers_compressed/
+
 frame_and_papers/
 
 __pycache__/
