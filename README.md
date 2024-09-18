@@ -61,11 +61,11 @@ This is a terminal application built for CWRU HPC to assist researchers, educato
 
 The program can be run using
 
-```
-#Change Directory to tui (Terminal user interface)
+```bash
+# Change Directory to tui (Terminal user interface)
 cd tui
 
-#Execute the python application
+# Execute the python application
 python3 cur_mnt.py
 ```
 
