@@ -54,7 +54,8 @@ This is a terminal application built for CWRU HPC to assist researchers, educato
     - Copy the FrameNet dataset folder `frame/` to the work directory.
     - Create JSON-format FrameNet dataset folder `frame_and_papers/` using [FrameNet XML Parser](#framenet-xml-parser).
     - Paste the research papers available in FrameNet dataset folder into `frame_and_papers/`.
-    - (Optional) Combine all indiviual FrameNet files into a single JSON frame file.
+    - Combine all indiviual FrameNet files into a single JSON frame file.
+    - Transform all the PDF research paper into JSON files using convert_pdf_json.py
 3. Request an interactive job on the GPU node of CWRU HPC.
 
 ### Usage
