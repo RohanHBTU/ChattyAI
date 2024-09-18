@@ -127,11 +127,11 @@ The evaluation process consists of the following steps:
 
 ## Fulltext Annotation Parser
 
-## Introduction
+### Introduction
 
 This code is capable of converting the original Fulltext annotated corpus of FrameNet data in XML format to JSON format. A single sentence is annotated into various layers such as part of speech, named entity recognition, white space layer (word sense disambiguation), FrameNet layer and others (Other, Sent, Verb). The most significant layers for our purpose are FrameNet and Named Entity Recognition. It is similar to FrameNet XML Parser.
 
-## Usage
+### Usage
 
 ```bash
 #Activate the virtual environment
