@@ -226,7 +226,7 @@ def main(stdscr):
                     else:
                         bot_reply = bot_response(context)
                         context+="<|ASSISTANT|>"+str(bot_reply)
-                    #bot_reply = bot_response_short(input_text.strip())
+                    
                     output_lines.extend(wrap_text(f"Bot: {bot_reply}", chat_width)+[""])
 
                     input_text = ""
@@ -243,8 +243,8 @@ def main(stdscr):
                 cursor_x += len(""""You are a FrameNet expert tasked with annotating sentences in JSON format. The sentence to be annotated is "sentence".""")
                 input_scroll_pos = max(0, scroll_index - 2)
             elif key == 6:  # Ctrl+F (ASCII code 1) to insert 'sample text'
-                input_text = input_text[:cursor_x] + """Describe the frame "FrameName" using it's frame definition and frame elements.""" + input_text[cursor_x:]
-                cursor_x += len("""Describe the frame "FrameName" using it's frame definition and frame elements.""")
+                input_text = input_text[:cursor_x] + """Describe the frame "FrameName" using its frame definition and frame elements.""" + input_text[cursor_x:]
+                cursor_x += len("""Describe the frame "FrameName" using its frame definition and frame elements.""")
                 input_scroll_pos = max(0, scroll_index - 2)
             elif key == curses.KEY_BACKSPACE or key == 127:
                 if cursor_x > 0:
